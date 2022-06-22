@@ -235,7 +235,7 @@ export default function Home() {
               </Heading>
 
               <Text textAlign="center" margin="10px 0 25px 0">
-                I have 3 months Experience as a Frontend Developer
+                I have 3 months Experience as a Backend Developer
               </Text>
 
               <UnorderedList listStyleType="none" display="flex" flexWrap="wrap">
