@@ -18,22 +18,22 @@ export default function Home() {
   const floatButtonList = [
     {
       name: "profile",
-      children: <Icon as={FaRegUser} color="inherit" />,
+      children: <Icon as={FaRegUser} color="inherit" fontSize="20px" />,
       action: () => setActiveFloatButton("profile"),
     },
     {
       name: "experience",
-      children: <Icon as={FaRegAddressBook} color="inherit" />,
+      children: <Icon as={FaRegAddressBook} color="inherit" fontSize="20px" />,
       action: () => setActiveFloatButton("experience"),
     },
     {
       name: "portfolio",
-      children: <Icon as={FaRegFolder} color="inherit" />,
+      children: <Icon as={FaRegFolder} color="inherit" fontSize="20px" />,
       action: () => setActiveFloatButton("portfolio"),
     },
     {
       name: "service",
-      children: <Icon as={FaRegListAlt} color="inherit" />,
+      children: <Icon as={FaRegListAlt} color="inherit" fontSize="20px" />,
       action: () => setActiveFloatButton("service"),
     },
   ];
