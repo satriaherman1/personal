@@ -1,12 +1,15 @@
-import { Box, Flex, Heading, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import "./styles.css";
 
 export default function WorkExperience() {
   const [MediumScreen] = useMediaQuery("(min-width: 768px)");
+  const bg = useColorModeValue("gray.100", "#253240");
+  const shadow = useColorModeValue("#0a0a0a", "none");
+  const divider = useColorModeValue("#0a0a0a", "#ffffff");
 
   return (
     <Flex gap={MediumScreen ? 10 : 3} justifyContent="center" marginY={6}>
-      <Box borderRight="1px dashed #0a0a0a" padding="0px 19px 19px 0" marginTop={6}>
+      <Box borderRight={`1px dashed ${divider}`} padding="0px 19px 19px 0" marginTop={6}>
         <Box position="relative" height="50%">
           <Text fontWeight="semibold">March 2021 - May 2021</Text>
           <span className="work-list-bullet"></span>
@@ -17,7 +20,7 @@ export default function WorkExperience() {
         </Box>
       </Box>
       <Box display="flex" flexDirection="column" gap={5}>
-        <Box flexBasis="80%" bg="gray.100" padding="17px 22px" rounded="md" maxWidth="500px">
+        <Box flexBasis="80%" bg={bg} padding="17px 22px" rounded="md" maxWidth="500px">
           <Heading as="h3" size="md">
             Web Developer Intern -{" "}
             <Box as="a" href="https://brainmatics.com" color="teal" fontSize="sm">
@@ -40,7 +43,7 @@ export default function WorkExperience() {
             used by Local Police in Indonesia. We using Laravel 7|8, PostgreSQL and Jquery to build this application
           </Text>
         </Box>
-        <Box flexBasis="80%" bg="gray.100" padding="17px 22px" rounded="md" maxWidth="500px">
+        <Box flexBasis="80%" bg={bg} padding="17px 22px" rounded="md" maxWidth="500px">
           <Heading as="h3" size="md">
             Frontend Web Developer -
             <Box as="a" href="https://clodeo.com" color="teal" fontSize="sm" marginLeft={1}>

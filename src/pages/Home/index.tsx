@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Icon, Image, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Icon, Image, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 // import NavigationDrawer from "@src/components/pages/home/navigation-drawer";
 import { BosImg, BosPreview, MeImage, ShipdeoLogo } from "@src/config/pathImage";
 import { Link } from "react-router-dom";
@@ -14,6 +14,9 @@ import { BiCodeBlock } from "react-icons/bi";
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
   const [activeFloatButton, setActiveFloatButton] = useState<string>("profile");
+  const bg = useColorModeValue("#ffffff", "#253240");
+  const shadow = useColorModeValue("#cdcdcda3", "none");
+  const blueSchemes = useColorModeValue("blue.500", "#90cef4");
 
   const floatButtonList = [
     {
@@ -52,7 +55,7 @@ export default function Home() {
         <Flex alignItems="center" columnGap={10} rowGap={4} paddingY={LargeScreen ? "60px" : 8} flexDirection={!LargeScreen ? "column" : "row"} justifyContent="space-between">
           <Image flexBasis={LargeScreen ? "50%" : "100%"} borderRadius="20px" width="100%" maxWidth={LargeScreen ? "410px" : "unset"} src={MeImage} />
           <Box flexBasis={LargeScreen ? "50%" : "100%"}>
-            <Text fontWeight="600" color="blue.500">
+            <Text fontWeight="600" color={blueSchemes} colorScheme="blue">
               Hello, I am
             </Text>
             <Heading as="h2"> Satria Herman</Heading>
@@ -80,7 +83,7 @@ export default function Home() {
 
           {/* <Flex gap={5} flexDirection={LargeScreen ? "row" : "column"} justifyContent="center" marginTop={15}>
             <Box boxShadow="0 5px 15px #dce4e6" padding="20px 10px" width="full" maxWidth="500px">
-              <Heading as="h3" size="md" textAlign="center" color="blue.500">
+              <Heading as="h3" size="md" textAlign="center" color={blueSchemes}>
                 {" "}
                 Education
               </Heading>
@@ -88,7 +91,7 @@ export default function Home() {
               <UnorderedList listStyleType="none" marginTop={6} display="flex" flexDirection="column" rowGap={3}>
                 <ListItem>
                   <Box display="flex" alignItems="center" columnGap={2}>
-                    <Icon as={FaCheckCircle} color="blue.500" />
+                    <Icon as={FaCheckCircle} color={blueSchemes} />
                     <Text fontWeight="semibold">SDN 4 Srobyong</Text>
                   </Box>
                   <Box marginLeft={6} marginTop={1}>
@@ -97,7 +100,7 @@ export default function Home() {
                 </ListItem>
                 <ListItem>
                   <Box display="flex" alignItems="center" columnGap={2}>
-                    <Icon as={FaCheckCircle} color="blue.500" />
+                    <Icon as={FaCheckCircle} color={blueSchemes} />
                     <Text fontWeight="semibold">SMPN 1 Mlonggo</Text>
                   </Box>
                   <Box marginLeft={6} marginTop={1}>
@@ -106,7 +109,7 @@ export default function Home() {
                 </ListItem>
               </UnorderedList>
             </Box>
-            <Box boxShadow="0 1px 15px #dce4e6" padding="20px 25px" width="full" maxWidth="500px" color="blue.500">
+            <Box boxShadow="0 1px 15px #dce4e6" padding="20px 25px" width="full" maxWidth="500px" color={blueSchemes}>
               <Heading as="h3" size="md" textAlign="center">
                 {" "}
                 Work
@@ -141,7 +144,7 @@ export default function Home() {
               <Link to="/portfolio">
                 <SimpleCard
                   bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color="blue.500">
+                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
                       Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
                     </Text>
                   }
@@ -154,7 +157,7 @@ export default function Home() {
               <Link to="/portfolio">
                 <SimpleCard
                   bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color="blue.500">
+                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
                       Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
                     </Text>
                   }
@@ -167,7 +170,7 @@ export default function Home() {
               <Link to="/portfolio">
                 <SimpleCard
                   bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color="blue.500">
+                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
                       Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
                     </Text>
                   }
@@ -186,8 +189,8 @@ export default function Home() {
             My Abilities
           </Heading>
           <Flex gap={9} marginTop={12} justifyContent="center" flexDirection={LargeScreen ? "row" : "column"}>
-            <Box width="full" padding="25px 20px" boxShadow="0px 0px 15px #cdcdcda3" maxWidth="400px">
-              <Heading as="h2" fontSize="2xl" color="blue.500" textAlign="center">
+            <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={`0px 0px 15px ${shadow}`} maxWidth="400px">
+              <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
                 Frontend Dev
               </Heading>
 
@@ -226,8 +229,8 @@ export default function Home() {
                 </ListItem>
               </UnorderedList>
             </Box>
-            <Box width="full" padding="25px 20px" boxShadow="0px 0px 15px #cdcdcda3" maxWidth="400px">
-              <Heading as="h2" fontSize="2xl" color="blue.500" textAlign="center">
+            <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={`0px 0px 15px ${shadow}`} maxWidth="400px">
+              <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
                 Backend Dev
               </Heading>
 
@@ -308,6 +311,8 @@ export default function Home() {
           </Flex>
         </Box>
       </Container>
+
+      <Box as="footer" marginTop={8} paddingY={10} bg={blueSchemes}></Box>
 
       <FloatButton active={activeFloatButton} buttonList={floatButtonList} />
     </header>
