@@ -1,13 +1,15 @@
-import { Box, Button, Container, Flex, Grid, GridItem, Heading, Icon, Image, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Icon, Image, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useMediaQuery } from "@chakra-ui/react";
 // import NavigationDrawer from "@src/components/pages/home/navigation-drawer";
 import { BosImg, BosPreview, MeImage, ShipdeoLogo } from "@src/config/pathImage";
 import { Link } from "react-router-dom";
-import { FaRegAddressBook, FaRegUser, FaRegFolder, FaArrowRight, FaRegListAlt } from "react-icons/fa";
+import { FaRegAddressBook, FaRegUser, FaRegFolder, FaArrowRight, FaRegListAlt, FaNodeJs, FaWordpress } from "react-icons/fa";
 import WorkExperience from "@src/components/pages/home/work-experience";
 import { DownloadIcon } from "@chakra-ui/icons";
 import FloatButton from "@src/components/common/float-button";
 import { useState } from "react";
 import SimpleCard from "@src/components/common/simple-card";
+import ServiceCard from "@src/components/pages/home/service-card";
+import { BiCodeBlock } from "react-icons/bi";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
@@ -171,6 +173,49 @@ export default function Home() {
                   }
                   image={BosImg}
                   title="Binmas Online System"
+                />
+              </Link>
+            </Box>
+          </Flex>
+        </Box>
+
+        <Box padding={LargeScreen ? "120px 0" : "40px 0"}>
+          <Text textAlign="center">Service</Text>
+
+          <Heading textAlign="center" as="h2" size="lg">
+            My Services
+          </Heading>
+
+          <Flex marginTop={10} gap={8} flexDirection={LargeScreen ? "row" : "column"}>
+            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
+              <Link to="/portfolio">
+                <ServiceCard
+                  imageBg="#3182CE"
+                  icon={<Icon as={BiCodeBlock} lineHeight="0" fontSize="30px" color="white" />}
+                  description="Converting UI Design to online Website using HTML,CSS,JS or React"
+                  title="Convert Design to Website"
+                />
+              </Link>
+            </Box>
+
+            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
+              <Link to="/portfolio">
+                <ServiceCard
+                  imageBg="#319795"
+                  icon={<Icon as={FaNodeJs} lineHeight="0" fontSize="30px" color="white" />}
+                  title="Backend Development"
+                  description="Backend Developemnt Using Laravel or Nodejs - Express"
+                />
+              </Link>
+            </Box>
+
+            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
+              <Link to="/portfolio">
+                <ServiceCard
+                  imageBg="#E53E3E"
+                  icon={<Icon as={FaWordpress} lineHeight="0" fontSize="30px" color="white" />}
+                  title="Wordpress Development"
+                  description="Website Development using CMS Wordpress Technology"
                 />
               </Link>
             </Box>

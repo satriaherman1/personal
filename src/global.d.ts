@@ -14,3 +14,11 @@ interface IButtonFloatList {
   action?: () => any;
   children: any;
 }
+
+declare interface IServiceCard {
+  title: string;
+
+  imageBg: string;
+  description: string;
+  icon: React.ReactElement;
+}
