@@ -1,5 +1,5 @@
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { loadSnowPreset } from "tsparticles-preset-snow";
 
 const ParticleBg = () => {
   const particlesInit = async (main: any) => {
@@ -8,7 +8,7 @@ const ParticleBg = () => {
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(main);
+    await loadSnowPreset(main);
   };
 
   const particlesLoaded: any = (container: any) => {
@@ -25,6 +25,7 @@ const ParticleBg = () => {
             value: "transparent",
           },
         },
+        preset: "Snow",
 
         fpsLimit: 120,
         interactivity: {
@@ -97,3 +98,23 @@ const ParticleBg = () => {
 };
 
 export default ParticleBg;
+
+// import Particles from "react-tsparticles";
+// import type { Engine } from "tsparticles-engine";
+// import { loadSnowPreset } from "tsparticles-preset-snow";
+
+// export class ParticlesContainer extends P {
+//   // this customizes the component tsParticles installation
+//   async customInit(engine: Engine): Promise<void> {
+//     // this adds the preset to tsParticles, you can safely use the
+//     await loadSnowPreset(engine);
+//   }
+
+//   render() {
+//     const options = {
+//       preset: "snow",
+//     };
+
+//     return <Particles options={options} init={this.customInit} />;
+//   }
+// }

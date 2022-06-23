@@ -18,7 +18,8 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-tsparticles": "^2.1.0",
-    "tsparticles": "^2.1.0"
+    "tsparticles": "^2.1.0",
+    "tsparticles-preset-snow": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
