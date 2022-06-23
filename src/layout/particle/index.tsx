@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Particles from "react-tsparticles";
 import { loadSnowPreset } from "tsparticles-preset-snow";
 
@@ -97,7 +98,7 @@ const ParticleBg = () => {
   );
 };
 
-export default ParticleBg;
+export default memo(ParticleBg);
 
 // import Particles from "react-tsparticles";
 // import type { Engine } from "tsparticles-engine";
