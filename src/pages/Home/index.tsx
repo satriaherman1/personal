@@ -318,7 +318,7 @@ export default function Home() {
         </Box>
       </Container>
 
-      <Box as="footer" marginTop={8} paddingY={10} bg="blue.900" position="relative" height="300px">
+      <Box as="footer" marginTop={8} paddingY={10} bg="#253240" position="relative" height="300px">
         <Container maxW="1200px">
           <Heading as="h2" fontSize="4xl" color="white">
             Contact Us
