@@ -2,7 +2,7 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 
 export default function FaqSection() {
   return (
-    <Accordion defaultIndex={[0]} allowMultiple color="black">
+    <Accordion defaultIndex={[0]} allowMultiple>
       <AccordionItem border="none" paddingY={1}>
         <h2>
           <AccordionButton>
@@ -31,12 +31,12 @@ export default function FaqSection() {
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              <Text fontWeight={600}>Can I request for revision out of agreement before?</Text>
+              <Text fontWeight={600}>Can I Make request outside your skill scope?</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4}>Yes, you can request for revision out of agreement. But you need to pay more for that revision</AccordionPanel>
+        <AccordionPanel pb={4}>Yes, you can. But i need to validate your request before i accept your project.</AccordionPanel>
       </AccordionItem>
 
       <AccordionItem border="none" paddingY={1}>

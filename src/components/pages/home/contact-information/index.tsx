@@ -25,13 +25,13 @@ export default function ContactInformation() {
       </UnorderedList>
 
       <Flex gap={3} color="white" marginTop={9} paddingLeft={4}>
-        <Box as="a" href="https://www.linkedin.com/in/muhammad-satria-herman/" padding="10px" lineHeight="0" bg="blue.600" rounded="lg">
+        <Box as="a" href="https://www.linkedin.com/in/muhammad-satria-herman/" padding="10px" lineHeight="0" bg="blue.800" rounded="lg">
           <Icon as={FaLinkedin} fontSize="20px" />
         </Box>
-        <Box as="a" href="https://www.github.com/satriaherman1/" padding="10px" lineHeight="0" bg="blue.600" rounded="lg">
+        <Box as="a" href="https://www.github.com/satriaherman1/" padding="10px" lineHeight="0" bg="blue.800" rounded="lg">
           <Icon as={FaGithub} fontSize="20px" />
         </Box>
-        <Box as="a" href="https://www.github.com/satriaherman1/" padding="10px" lineHeight="0" bg="blue.600" rounded="lg">
+        <Box as="a" href="https://www.github.com/satriaherman1/" padding="10px" lineHeight="0" bg="blue.800" rounded="lg">
           <Icon as={FaMedium} fontSize="20px" />
         </Box>
       </Flex>

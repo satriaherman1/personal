@@ -20,7 +20,7 @@ export default function Home() {
   const bg = useColorModeValue("#ffffff", "#253240");
   const shadow = useColorModeValue("#cdcdcda3", "none");
   const blueSchemes = useColorModeValue("blue.500", "#90cef4");
-  // const blueSchemes = useColorModeValue("blue.500", "blue");
+  const serviceBg = useColorModeValue("white", "gray.700");
   const boxShadow = "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(39, 39, 39, 0.15) 0px 4px 20px 0px";
 
   const floatButtonList = [
@@ -58,13 +58,13 @@ export default function Home() {
           </Box>
         </Flex> */}
 
-        <Flex alignItems="center" columnGap={10} rowGap={4} paddingY={LargeScreen ? "60px" : 8} flexDirection={!LargeScreen ? "column" : "row"} justifyContent="space-between">
+        <Flex id="profile" alignItems="center" columnGap={10} rowGap={4} paddingY={LargeScreen ? "60px" : 8} flexDirection={!LargeScreen ? "column" : "row"} justifyContent="space-between">
           <Image flexBasis={LargeScreen ? "50%" : "100%"} borderRadius="20px" width="100%" maxWidth={LargeScreen ? "410px" : "unset"} src={MeImage} />
           <Box flexBasis={LargeScreen ? "50%" : "100%"}>
             <Text fontWeight="600" color={blueSchemes} colorScheme="blue">
               Hello, I am
             </Text>
-            <Heading as="h2"> Satria Herman</Heading>
+            <Heading as="h2">Muhammad Satria Herman</Heading>
             <Text marginTop={6}>
               I'm Frontend Developer that ever worked on 2 companies <a href="">Clodeo</a> and <a href="">Brainmatics</a>. I've been working as a developer for 1 years and i have a such skills like :{" "}
               <b>React</b>, <b>PHP</b>, <b>JavaScript</b>, <b>Nodejs</b>, <b>Laravel</b>. I also working as Freelance Frontend Developer for around 2 years
@@ -81,7 +81,7 @@ export default function Home() {
           </Box>
         </Flex>
 
-        <Box paddingY="50px">
+        <Box paddingY="50px" id="experience">
           <Text textAlign="center">My Experience</Text>
           <Heading textAlign="center" as="h2" size="lg">
             Experience
@@ -140,7 +140,7 @@ export default function Home() {
           </Tabs>
         </Box>
 
-        <Box padding="30px 0">
+        <Box padding="30px 0" id="portfolio">
           <Heading textAlign="center" as="h2" size="lg">
             Portfolio
           </Heading>
@@ -274,7 +274,7 @@ export default function Home() {
           </Flex>
         </Box>
 
-        <Box padding={LargeScreen ? "120px 0" : "40px 0"}>
+        <Box id="service" padding={LargeScreen ? "120px 0" : "40px 0"}>
           <Text textAlign="center">Service</Text>
 
           <Heading textAlign="center" as="h2" size="lg">
@@ -318,7 +318,7 @@ export default function Home() {
         </Box>
       </Container>
 
-      <Box as="footer" marginTop={8} paddingY={10} bg="#253240" position="relative" height="300px">
+      <Box as="footer" marginTop={8} paddingY={10} bg="#253240" position="relative" height="350px">
         <Container maxW="1200px">
           <Heading as="h2" fontSize="4xl" color="white">
             Contact Us
@@ -328,7 +328,7 @@ export default function Home() {
           </Text>
 
           <Flex marginY={12} gap={6} flexDirection={LargeScreen ? "row" : "column"}>
-            <Box bg="white" padding="20px 22px" rounded="md" width="100%" boxShadow={boxShadow}>
+            <Box bg={serviceBg} padding="20px 22px" rounded="md" width="100%" boxShadow={boxShadow}>
               <FaqSection />
             </Box>
             <Box padding="35px 22px" rounded="md" bg="blue.700" flexBasis={LargeScreen ? "40%" : "100%"} width="100%" boxShadow={boxShadow}>
