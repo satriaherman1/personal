@@ -193,6 +193,92 @@ export default function Home() {
           </Flex>
         </Box>
 
+        <Box padding={LargeScreen ? "120px 0" : "50px 0"}>
+          <Text textAlign="center">Skills</Text>
+
+          <Heading textAlign="center" as="h2" size="lg">
+            My Abilities
+          </Heading>
+          <Flex gap={9} marginTop={12} justifyContent="center" flexDirection={LargeScreen ? "row" : "column"}>
+            <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={boxShadow} maxWidth="400px">
+              <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
+                Frontend Dev
+              </Heading>
+
+              <Text textAlign="center" margin="10px 0 25px 0">
+                I have 1 Years Experience as a Frontend Developer
+              </Text>
+
+              <UnorderedList listStyleType="none" display="flex" flexWrap="wrap">
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Reactjs</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Bootstrap</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Javascript</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Tailwind</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Chakra UI</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>SASS</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Ant Design</Text>
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={boxShadow} maxWidth="400px">
+              <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
+                Backend Dev
+              </Heading>
+
+              <Text textAlign="center" margin="10px 0 25px 0">
+                I have 3 months Experience as a Backend Developer
+              </Text>
+
+              <UnorderedList listStyleType="none" display="flex" flexWrap="wrap">
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Laravel</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Codeigniter</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>Nodejs</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>MongoDB</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>PostgreSQL</Text>
+                </ListItem>
+                <ListItem flexBasis="50%" display="flex" alignItems="center">
+                  <Icon as={FaCheck} />
+                  <Text marginLeft={3}>MySQL</Text>
+                </ListItem>
+              </UnorderedList>
+            </Box>
+          </Flex>
+        </Box>
+
         <Box id="service" padding={LargeScreen ? "120px 0" : "40px 0"}>
           <Text textAlign="center">Service</Text>
 
@@ -257,93 +343,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box padding={LargeScreen ? "350px 0 80px 0" : "50px 0"}>
-        <Text textAlign="center">Skills</Text>
-
-        <Heading textAlign="center" as="h2" size="lg">
-          My Abilities
-        </Heading>
-        <Flex gap={9} marginTop={12} justifyContent="center" flexDirection={LargeScreen ? "row" : "column"}>
-          <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={boxShadow} maxWidth="400px">
-            <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
-              Frontend Dev
-            </Heading>
-
-            <Text textAlign="center" margin="10px 0 25px 0">
-              I have 1 Years Experience as a Frontend Developer
-            </Text>
-
-            <UnorderedList listStyleType="none" display="flex" flexWrap="wrap">
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Reactjs</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Bootstrap</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Javascript</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Tailwind</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Chakra UI</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>SASS</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Ant Design</Text>
-              </ListItem>
-            </UnorderedList>
-          </Box>
-          <Box width="full" background={bg} rounded="md" padding="25px 20px" boxShadow={boxShadow} maxWidth="400px">
-            <Heading as="h2" fontSize="2xl" color={blueSchemes} textAlign="center">
-              Backend Dev
-            </Heading>
-
-            <Text textAlign="center" margin="10px 0 25px 0">
-              I have 3 months Experience as a Backend Developer
-            </Text>
-
-            <UnorderedList listStyleType="none" display="flex" flexWrap="wrap">
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Laravel</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Codeigniter</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>Nodejs</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>MongoDB</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>PostgreSQL</Text>
-              </ListItem>
-              <ListItem flexBasis="50%" display="flex" alignItems="center">
-                <Icon as={FaCheck} />
-                <Text marginLeft={3}>MySQL</Text>
-              </ListItem>
-            </UnorderedList>
-          </Box>
-        </Flex>
-      </Box>
-
-      <Box position="relative">
+      <Box position="relative" marginTop={LargeScreen ? "300px" : "750px"}>
         <Feedback />
       </Box>
 
