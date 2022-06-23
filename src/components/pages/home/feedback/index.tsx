@@ -29,7 +29,7 @@ export default function Feedback() {
           slideShadows: false,
         }}
         pagination={true}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
