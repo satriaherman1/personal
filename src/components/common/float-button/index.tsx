@@ -7,9 +7,9 @@ export default function FloatButton(props: IFloatButton) {
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#ececec99", "#19202799");
   const darkButtonBg = useColorModeValue("gray.700", "#2A4365");
-  console.log(darkButtonBg);
+
   return (
-    <Flex padding="10px 20px" gap={3} position="fixed" alignItems="center" bottom="5vh" left="50%" className="float-button-container" background={bg}>
+    <Flex zIndex={999} padding="10px 20px" gap={3} position="fixed" alignItems="center" bottom="5vh" left="50%" className="float-button-container" background={bg}>
       {buttonList.map((btn) => (
         <a href={`#${btn.name}`} className={`float-button ${btn.name === active && "active"}`} onClick={btn.action}>
           {btn.children}
