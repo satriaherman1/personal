@@ -10,6 +10,9 @@ import { useState } from "react";
 import SimpleCard from "@src/components/common/simple-card";
 import ServiceCard from "@src/components/pages/home/service-card";
 import { BiCodeBlock } from "react-icons/bi";
+import ParticleBg from "@src/layout/particle";
+import FaqSection from "@src/components/pages/home/FaQ";
+import ContactInformation from "@src/components/pages/home/contact-information";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
@@ -17,6 +20,8 @@ export default function Home() {
   const bg = useColorModeValue("#ffffff", "#253240");
   const shadow = useColorModeValue("#cdcdcda3", "none");
   const blueSchemes = useColorModeValue("blue.500", "#90cef4");
+  // const blueSchemes = useColorModeValue("blue.500", "blue");
+  const boxShadow = "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(39, 39, 39, 0.15) 0px 4px 20px 0px";
 
   const floatButtonList = [
     {
@@ -42,8 +47,9 @@ export default function Home() {
   ];
 
   return (
-    <header>
-      <Container maxW="1200px">
+    <>
+      <ParticleBg />
+      <Container maxW="1200px" position="relative">
         {/* <Flex paddingY={LargeScreen ? 8 : 3} h="fit-content" w="full" alignItems="center" justifyContent="space-between">
           <Box>
             <Heading as="h3" size="md">
@@ -312,9 +318,27 @@ export default function Home() {
         </Box>
       </Container>
 
-      <Box as="footer" marginTop={8} paddingY={10} bg={blueSchemes}></Box>
+      <Box as="footer" marginTop={8} paddingY={10} bg="blue.900" position="relative" height="300px">
+        <Container maxW="1200px">
+          <Heading as="h2" fontSize="4xl" color="white">
+            Contact Us
+          </Heading>
+          <Text marginTop={2} color="white" maxWidth="400px">
+            Let's do a project together with me. Send me an email and I will do the best for your project
+          </Text>
+
+          <Flex marginY={12} gap={6} flexDirection={LargeScreen ? "row" : "column"}>
+            <Box bg="white" padding="20px 22px" rounded="md" width="100%" boxShadow={boxShadow}>
+              <FaqSection />
+            </Box>
+            <Box padding="35px 22px" rounded="md" bg="blue.700" flexBasis={LargeScreen ? "40%" : "100%"} width="100%" boxShadow={boxShadow}>
+              <ContactInformation />
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
 
       <FloatButton active={activeFloatButton} buttonList={floatButtonList} />
-    </header>
+    </>
   );
 }
