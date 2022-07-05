@@ -1,25 +1,24 @@
 import { Box, Button, Container, Flex, Heading, Icon, Image, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
-// import NavigationDrawer from "@src/components/pages/home/navigation-drawer";
-import { BosImg, BosPreview, MeImage, ShipdeoLogo } from "@src/config/pathImage";
+import { MeImage } from "@src/config/pathImage";
 import { Link } from "react-router-dom";
 import { FaRegAddressBook, FaRegUser, FaRegFolder, FaArrowRight, FaRegListAlt, FaNodeJs, FaWordpress, FaCheck } from "react-icons/fa";
 import WorkExperience from "@src/components/pages/home/work-experience";
 import { DownloadIcon } from "@chakra-ui/icons";
 import FloatButton from "@src/components/common/float-button";
 import { useState } from "react";
-import SimpleCard from "@src/components/common/simple-card";
 import ServiceCard from "@src/components/pages/home/service-card";
 import { BiCodeBlock } from "react-icons/bi";
 import ParticleBg from "@src/layout/particle";
 import FaqSection from "@src/components/pages/home/FaQ";
 import ContactInformation from "@src/components/pages/home/contact-information";
 import Feedback from "@src/components/pages/home/feedback";
+import Footer from "@src/components/pages/home/footer";
+import HomePortfolio from "@src/components/pages/home/portfolio";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
   const [activeFloatButton, setActiveFloatButton] = useState<string>("profile");
   const bg = useColorModeValue("#ffffff", "#253240");
-  const shadow = useColorModeValue("#cdcdcda3", "none");
   const blueSchemes = useColorModeValue("blue.500", "#90cef4");
   const serviceBg = useColorModeValue("white", "gray.700");
   const boxShadow = "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(39, 39, 39, 0.15) 0px 4px 20px 0px";
@@ -55,14 +54,6 @@ export default function Home() {
     <>
       <ParticleBg />
       <Container maxW="1200px" position="relative">
-        {/* <Flex paddingY={LargeScreen ? 8 : 3} h="fit-content" w="full" alignItems="center" justifyContent="space-between">
-          <Box>
-            <Heading as="h3" size="md">
-              Satria
-            </Heading>
-          </Box>
-        </Flex> */}
-
         <Flex id="profile" alignItems="center" columnGap={10} rowGap={4} paddingY={LargeScreen ? "60px" : 8} flexDirection={!LargeScreen ? "column" : "row"} justifyContent="space-between">
           <Image flexBasis={LargeScreen ? "50%" : "100%"} borderRadius="20px" width="100%" maxWidth={LargeScreen ? "410px" : "unset"} src={MeImage} />
           <Box flexBasis={LargeScreen ? "50%" : "100%"}>
@@ -145,53 +136,7 @@ export default function Home() {
           </Tabs>
         </Box>
 
-        <Box padding="30px 0" id="portfolio">
-          <Heading textAlign="center" as="h2" size="lg">
-            Portfolio
-          </Heading>
-
-          <Flex marginTop={10} gap={8} flexDirection={LargeScreen ? "row" : "column"}>
-            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
-              <Link to="/portfolio">
-                <SimpleCard
-                  bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
-                      Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
-                    </Text>
-                  }
-                  image={BosPreview}
-                  title="Binmas Online System"
-                />
-              </Link>
-            </Box>
-            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
-              <Link to="/portfolio">
-                <SimpleCard
-                  bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
-                      Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
-                    </Text>
-                  }
-                  image={ShipdeoLogo}
-                  title="Shipdeo Website"
-                />
-              </Link>
-            </Box>
-            <Box flexBasis={LargeScreen ? "33%" : "100%"}>
-              <Link to="/portfolio">
-                <SimpleCard
-                  bottomAction={
-                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
-                      Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
-                    </Text>
-                  }
-                  image={BosImg}
-                  title="Binmas Online System"
-                />
-              </Link>
-            </Box>
-          </Flex>
-        </Box>
+        <HomePortfolio />
 
         <Box padding={LargeScreen ? "120px 0" : "50px 0"}>
           <Text textAlign="center">Skills</Text>
@@ -348,6 +293,8 @@ export default function Home() {
       </Box>
 
       <FloatButton active={activeFloatButton} buttonList={floatButtonList} />
+
+      <Footer />
     </>
   );
 }
