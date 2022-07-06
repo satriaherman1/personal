@@ -1,10 +1,11 @@
-import { Box, Container, Flex, Heading, ListItem, Text, UnorderedList, useMediaQuery } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, ListItem, Text, UnorderedList, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 
 export default function Footer() {
   const [MediumScreen] = useMediaQuery("(min-width: 768px)");
+  const bg = useColorModeValue("#253240", "gray.700");
 
   return (
-    <Box as="footer" paddingY={10} bg="blue.900" position="relative" color="white">
+    <Box as="footer" paddingY={10} bg={bg} position="relative" color="white">
       <Container maxW="1200px">
         <Text textAlign="center">&copy; Satria Herman 2022</Text>
         {/* <Flex columnGap={60} rowGap={7} flexDirection={MediumScreen ? "row" : "column"}>
