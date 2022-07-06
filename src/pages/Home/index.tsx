@@ -136,7 +136,7 @@ export default function Home() {
           </Tabs>
         </Box>
 
-        <HomePortfolio />
+        <HomePortfolio isShowTitle title="Portfolio" />
 
         <Box padding={LargeScreen ? "120px 0" : "50px 0"}>
           <Text textAlign="center">Skills</Text>
@@ -288,7 +288,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box position="relative" marginTop={LargeScreen ? "300px" : "750px"}>
+      <Box position="relative" marginTop={LargeScreen ? "300px" : "750px"} marginBottom={200}>
         <Feedback />
       </Box>
 
