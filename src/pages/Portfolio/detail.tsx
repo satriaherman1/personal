@@ -17,7 +17,7 @@ export default function DetailPortfolio() {
     return portfolioService.getPortfolio(id);
   };
 
-  const { data } = useQuery("detail-portfolio", getPortfolioData);
+  const { data } = useQuery(`detail-portfolio/${id}`, getPortfolioData);
 
   return (
     <>
