@@ -38,7 +38,7 @@ export default function DetailPortfolio() {
 
         <ReactMarkdown rehypePlugins={[rehypeRaw]} children={data?.data?.data.attributes.content} />
 
-        <Divider />
+        <Divider marginY={3} />
         <Heading as="h2" fontSize={28} marginTop={5}>
           More Portfolio
         </Heading>
