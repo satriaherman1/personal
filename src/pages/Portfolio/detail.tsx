@@ -2,23 +2,28 @@ import { Box, Button, Container, Divider, Flex, Heading, Icon, Text, useColorMod
 import Footer from "@src/components/pages/home/footer";
 import HomePortfolio from "@src/components/pages/home/portfolio";
 import PortfolioService from "@src/service/rest/portfolio.service";
-import { FaArrowLeft, FaFacebook, FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { memo, useEffect } from "react";
+import { FaArrowLeft, FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
 
-export default function DetailPortfolio() {
-  const portfolioService = new PortfolioService();
+const DetailPortfolio = () => {
   const { id } = useParams();
+  const portfolioService = new PortfolioService();
 
   const getPortfolioData = () => {
     return portfolioService.getPortfolio(id);
   };
 
-  const { data } = useQuery(`detail-portfolio/${id}`, getPortfolioData);
+  const { data, isSuccess } = useQuery(`detail-portfolio/${id}`, getPortfolioData);
   const textGrayTheme = useColorModeValue("gray.600", "white");
+
+  if (isSuccess) {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <>
@@ -70,4 +75,6 @@ export default function DetailPortfolio() {
       <Footer />
     </>
   );
-}
+};
+
+export default memo(DetailPortfolio);

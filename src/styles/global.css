@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body ol {
+body ol,
+body ul {
   margin-left: 10px;
 }
