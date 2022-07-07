@@ -3,9 +3,8 @@ import { MeImage } from "@src/config/pathImage";
 import { Link } from "react-router-dom";
 import { FaRegAddressBook, FaRegUser, FaRegFolder, FaArrowRight, FaRegListAlt, FaNodeJs, FaWordpress, FaCheck } from "react-icons/fa";
 import WorkExperience from "@src/components/pages/home/work-experience";
-import { DownloadIcon } from "@chakra-ui/icons";
+
 import FloatButton from "@src/components/common/float-button";
-import { useState } from "react";
 import ServiceCard from "@src/components/pages/home/service-card";
 import { BiCodeBlock } from "react-icons/bi";
 import ParticleBg from "@src/layout/particle";
@@ -14,6 +13,8 @@ import ContactInformation from "@src/components/pages/home/contact-information";
 import Feedback from "@src/components/pages/home/feedback";
 import Footer from "@src/components/pages/home/footer";
 import HomePortfolio from "@src/components/pages/home/portfolio";
+import HomeProfile from "@src/components/pages/home/profile";
+import { useState } from "react";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
@@ -46,36 +47,11 @@ export default function Home() {
     },
   ];
 
-  const redirectWa = () => {
-    return window.open("https://wa.me/+628976121070?text=Hi , i am interested to do a job for you . can we do a project together?", "_blank");
-  };
-
   return (
     <>
       <ParticleBg />
       <Container maxW="1200px" position="relative">
-        <Flex id="profile" alignItems="center" columnGap={10} rowGap={4} paddingY={LargeScreen ? "60px" : 8} flexDirection={!LargeScreen ? "column" : "row"} justifyContent="space-between">
-          <Image flexBasis={LargeScreen ? "50%" : "100%"} borderRadius="20px" width="100%" maxWidth={LargeScreen ? "410px" : "unset"} src={MeImage} />
-          <Box flexBasis={LargeScreen ? "50%" : "100%"}>
-            <Text fontWeight="600" color={blueSchemes} colorScheme="blue">
-              Hello, I am
-            </Text>
-            <Heading as="h2">Muhammad Satria Herman</Heading>
-            <Text marginTop={6}>
-              I'm Frontend Developer that ever worked on 2 companies <a href="">Clodeo</a> and <a href="">Brainmatics</a>. I've been working as a developer for 1 years and i have a such skills like :{" "}
-              <b>React</b>, <b>PHP</b>, <b>JavaScript</b>, <b>Nodejs</b>, <b>Laravel</b>. I also working as Freelance Frontend Developer for around 2 years
-            </Text>
-
-            <Flex columnGap={3}>
-              <Button onClick={() => window.open("https://satria-herman.web.app/doc/cv.pdf", "download")} leftIcon={<DownloadIcon />} marginTop={5} colorScheme="blue">
-                Download CV
-              </Button>
-              <Button onClick={redirectWa} variant="outline" marginTop={5} colorScheme="blue">
-                Contact Me
-              </Button>
-            </Flex>
-          </Box>
-        </Flex>
+        <HomeProfile />
 
         <Box paddingY="50px" id="experience">
           <Text textAlign="center">My Experience</Text>

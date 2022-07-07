@@ -25,7 +25,8 @@
     "rehype-raw": "^6.1.1",
     "swiper": "^8.2.4",
     "tsparticles": "^2.1.0",
-    "tsparticles-preset-snow": "^2.1.0"
+    "tsparticles-preset-snow": "^2.1.0",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
