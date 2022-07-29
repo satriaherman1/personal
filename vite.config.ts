@@ -24,16 +24,17 @@ export default defineConfig({
       manifest: {
         name: "Satria Herman",
         short_name: "Satria",
+        start_url: "https://satriaherman.com",
         description: "Satria Herman Portfolio",
         theme_color: "#ffffff",
         icons: [
           {
-            src: "favicon/android-icon-114x114.png",
+            src: "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1659078426/portfolio/favicon/apple-icon-144x144_gryqwr.png",
             sizes: "114x114",
             type: "image/png",
           },
           {
-            src: "favicon/android-icon-180x180.png",
+            src: "fhttps://res.cloudinary.com/dbg3ckwtz/image/upload/v1659078426/portfolio/favicon/apple-icon-180x180_krriu1.png",
             sizes: "180x180",
             type: "image/png",
           },
