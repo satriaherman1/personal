@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Icon, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import SimpleCard from "@src/components/common/simple-card";
+import SimpleCardSkeleton from "@src/components/common/simple-card-skeleton";
 import PortfolioService from "@src/service/rest/portfolio.service";
 import { FaArrowRight } from "react-icons/fa";
 import { useQuery } from "react-query";
@@ -22,7 +23,7 @@ export default function HomePortfolio({ title, isShowTitle, itemsPerRow, justify
     return portfolioService.getPortfolios();
   };
 
-  const { data } = useQuery("portfolio", getPortfolioData, { cacheTime: 100 });
+  const { data, isLoading } = useQuery("portfolio", getPortfolioData, { cacheTime: 100 });
 
   return (
     <Box padding="30px 0" id="portfolio">
@@ -33,21 +34,27 @@ export default function HomePortfolio({ title, isShowTitle, itemsPerRow, justify
       )}
 
       <Flex gap={8} justifyContent={justifyContent ? justifyContent : "center"} flexWrap="wrap" flexDirection={MediumScreen ? "row" : "column"}>
-        {data?.data?.data?.map((d: any) => (
-          <Box flexBasis={100 / itemsPerRow - 5 + "%"}>
-            <Link to={`/portfolio/${d.id}`}>
-              <SimpleCard
-                bottomAction={
-                  <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
-                    Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
-                  </Text>
-                }
-                image={d.attributes.cover.data[0].attributes.url}
-                title={d.attributes.Title}
-              />
-            </Link>
-          </Box>
-        ))}
+        {isLoading ? (
+          <>
+            <SimpleCardSkeleton /> <SimpleCardSkeleton /> <SimpleCardSkeleton />{" "}
+          </>
+        ) : (
+          data?.data?.data?.map((d: any) => (
+            <Box flexBasis={100 / itemsPerRow - 5 + "%"}>
+              <Link to={`/portfolio/${d.id}`}>
+                <SimpleCard
+                  bottomAction={
+                    <Text display="flex" alignItems="center" marginTop={2} color={blueSchemes}>
+                      Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
+                    </Text>
+                  }
+                  image={d.attributes.cover.data[0].attributes.url}
+                  title={d.attributes.Title}
+                />
+              </Link>
+            </Box>
+          ))
+        )}
       </Flex>
     </Box>
   );

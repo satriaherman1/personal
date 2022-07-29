@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Skeleton, SkeletonCircle, Text, useColorModeValue } from "@chakra-ui/react";
 import StarRatings from "react-star-ratings";
 
 export default function ReviewCard() {
@@ -8,7 +8,15 @@ export default function ReviewCard() {
   return (
     <Box padding="20px 25px" rounded="lg" bg={bg} boxShadow={boxShadow}>
       <Flex padding="8px 12px" columnGap={3}>
-        <Image src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg" width="50px" height={"50px"} rounded="full" display="block" />
+        <Image
+          loading="lazy"
+          fallback={<SkeletonCircle width="50px" height="50px" />}
+          src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg"
+          width="50px"
+          height="50px"
+          rounded="full"
+          display="block"
+        />
         <Box>
           <Heading as="h3" size="md">
             M. Satria Herman

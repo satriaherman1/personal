@@ -5,6 +5,7 @@ export default function WorkExperience() {
   const [MediumScreen] = useMediaQuery("(min-width: 768px)");
   const bg = useColorModeValue("gray.100", "#253240");
   const divider = useColorModeValue("#0a0a0a", "#ffffff");
+  const tealSchemes = useColorModeValue("teal", "teal.200");
 
   return (
     <Flex gap={MediumScreen ? 10 : 3} justifyContent="center" marginY={6}>
@@ -22,7 +23,7 @@ export default function WorkExperience() {
         <Box flexBasis="80%" bg={bg} padding="17px 22px" rounded="md" maxWidth="500px">
           <Heading as="h3" size="md">
             Web Developer Intern -{" "}
-            <Box as="a" href="https://brainmatics.com" color="teal" fontSize="sm">
+            <Box as="a" href="https://brainmatics.com" color={tealSchemes} fontSize="sm">
               Brainmatics
             </Box>
           </Heading>
@@ -45,7 +46,7 @@ export default function WorkExperience() {
         <Box flexBasis="80%" bg={bg} padding="17px 22px" rounded="md" maxWidth="500px">
           <Heading as="h3" size="md">
             Frontend Web Developer -
-            <Box as="a" href="https://clodeo.com" color="teal" fontSize="sm" marginLeft={1}>
+            <Box as="a" href="https://clodeo.com" color={tealSchemes} fontSize="sm" marginLeft={1}>
               Clodeo
             </Box>
           </Heading>

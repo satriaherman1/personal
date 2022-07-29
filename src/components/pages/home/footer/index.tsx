@@ -22,27 +22,39 @@ export default function Footer() {
             <Box>
               <Text fontWeight={600}>Overview</Text>
               <UnorderedList listStyleType="none" marginLeft={0} marginTop={3}>
-                <ListItem>About</ListItem>
+                <ListItem>Portfolio</ListItem>
                 <ListItem>Services</ListItem>
-                <ListItem>Dev.to</ListItem>
+                <ListItem>Skills</ListItem>
               </UnorderedList>
             </Box>
 
             <Box>
               <Text fontWeight={600}>Explore</Text>
               <UnorderedList listStyleType="none" marginLeft={0} marginTop={3}>
-                <ListItem>Blog</ListItem>
-                <ListItem>Medium</ListItem>
-                <ListItem>Dev.to</ListItem>
+                <ListItem>
+                  <a href="https://blog.satriaherman.com">Blog</a>
+                </ListItem>
+                <ListItem>
+                  <a href="https://satriaherman.medium.com">Medium</a>
+                </ListItem>
+                <ListItem>
+                  <a href="https://dev.to/_satria_herman">Dev.to</a>
+                </ListItem>
               </UnorderedList>
             </Box>
 
             <Box>
               <Text fontWeight={600}>More</Text>
               <UnorderedList listStyleType="none" marginLeft={0} marginTop={3}>
-                <ListItem>Blog</ListItem>
-                <ListItem>Medium</ListItem>
-                <ListItem>Dev.to</ListItem>
+                <ListItem>
+                  <a href="https://technolifecycle.blogspot.com/">Blogspot</a>
+                </ListItem>
+                <ListItem>
+                  <a href="https://satriaherman.medium.com">Medium</a>
+                </ListItem>
+                <ListItem>
+                  <a href="https://www.upwork.com/freelancers/~0118f6ae8cf4fe60bc">Upwork</a>
+                </ListItem>
               </UnorderedList>
             </Box>
           </Flex>

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image, Skeleton, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import { MutableRefObject, useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { DownloadIcon } from "@chakra-ui/icons";
@@ -39,6 +39,7 @@ export default function HomeProfile() {
         width="100%"
         loading="lazy"
         maxWidth={LargeScreen ? "410px" : "unset"}
+        fallback={<Skeleton width="100%" height="400px" />}
         src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg"
       />
       <Box flexBasis={LargeScreen ? "50%" : "100%"}>
