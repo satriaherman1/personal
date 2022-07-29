@@ -11,6 +11,7 @@ const DetailPortfolio = lazy(() => import("./pages/Portfolio/detail"));
 
 function App() {
   const queryClient = new QueryClient();
+
   return (
     <ChakraProvider>
       <QueryClientProvider client={queryClient}>

@@ -18,9 +18,9 @@
   transition: 0.3s;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-  border-radius: 10px 0 0 10px;
+  /* border-radius: 10px 0 0 10px; */
   border: 1px solid rgba(255, 255, 255, 0.18);
-  transform: translateX(-60%);
+  transform: translateX(-50%);
 }
 
 .float-button.color-mode-button {
@@ -47,4 +47,13 @@
 .float-button-container.hide {
   left: 98.5vw;
   transform: translateX(0);
+}
+
+.float-button.hide-button {
+  background: linear-gradient(to top, #83aec4, #376da0);
+
+  position: absolute;
+  left: -26%;
+  padding: 18px 17px;
+  border-radius: 10px 0px 0px 10px;
 }

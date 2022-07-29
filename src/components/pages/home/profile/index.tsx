@@ -37,6 +37,7 @@ export default function HomeProfile() {
         flexBasis={LargeScreen ? "50%" : "100%"}
         borderRadius="20px"
         width="100%"
+        loading="lazy"
         maxWidth={LargeScreen ? "410px" : "unset"}
         src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg"
       />

@@ -69,7 +69,7 @@ const DetailPortfolio = () => {
           More Portfolio
         </Heading>
 
-        <HomePortfolio />
+        <HomePortfolio itemsPerRow={2} justifyContent="start" />
       </Container>
 
       <Footer />

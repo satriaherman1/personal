@@ -8,9 +8,11 @@ import { Link } from "react-router-dom";
 interface IHomePortfolio {
   isShowTitle?: boolean;
   title?: string;
+  itemsPerRow: number;
+  justifyContent?: string;
 }
 
-export default function HomePortfolio({ title, isShowTitle }: IHomePortfolio) {
+export default function HomePortfolio({ title, isShowTitle, itemsPerRow, justifyContent }: IHomePortfolio) {
   const [MediumScreen] = useMediaQuery("(min-width: 768px)");
   const blueSchemes = useColorModeValue("blue.500", "#90cef4");
 
@@ -30,9 +32,9 @@ export default function HomePortfolio({ title, isShowTitle }: IHomePortfolio) {
         </Heading>
       )}
 
-      <Flex gap={8} flexDirection={MediumScreen ? "row" : "column"}>
+      <Flex gap={8} justifyContent={justifyContent ? justifyContent : "center"} flexWrap="wrap" flexDirection={MediumScreen ? "row" : "column"}>
         {data?.data?.data?.map((d: any) => (
-          <Box>
+          <Box flexBasis={100 / itemsPerRow - 5 + "%"}>
             <Link to={`/portfolio/${d.id}`}>
               <SimpleCard
                 bottomAction={

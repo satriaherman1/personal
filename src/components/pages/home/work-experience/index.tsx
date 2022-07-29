@@ -4,7 +4,6 @@ import "./styles.css";
 export default function WorkExperience() {
   const [MediumScreen] = useMediaQuery("(min-width: 768px)");
   const bg = useColorModeValue("gray.100", "#253240");
-  const shadow = useColorModeValue("#0a0a0a", "none");
   const divider = useColorModeValue("#0a0a0a", "#ffffff");
 
   return (
