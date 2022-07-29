@@ -16,14 +16,14 @@ function App() {
     <ChakraProvider>
       <QueryClientProvider client={queryClient}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Suspense fallback={<Loading />}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" caseSensitive element={<HomePage />} />
-              <Route path="/portfolio/:id" element={<DetailPortfolio />} />
-            </Routes>
-          </BrowserRouter>
-        </Suspense>
+        {/* <Suspense fallback={<Loading />}> */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" caseSensitive element={<HomePage />} />
+            <Route path="/portfolio/:id" element={<DetailPortfolio />} />
+          </Routes>
+        </BrowserRouter>
+        {/* </Suspense> */}
       </QueryClientProvider>
     </ChakraProvider>
   );
