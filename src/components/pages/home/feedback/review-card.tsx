@@ -1,7 +1,15 @@
-import { Box, Flex, Heading, Image, Skeleton, SkeletonCircle, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, SkeletonCircle, Text, useColorModeValue } from "@chakra-ui/react";
 import StarRatings from "react-star-ratings";
 
-export default function ReviewCard() {
+interface IReviewCard {
+  name: string;
+  stars: number;
+  title: string;
+  description: string;
+  photo: string;
+}
+
+export default function ReviewCard({ name, title, stars, description, photo }: IReviewCard) {
   const bg = useColorModeValue("#ffffff", "#253240");
   const boxShadow = "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(39, 39, 39, 0.15) 0px 4px 20px 0px";
 
@@ -19,17 +27,15 @@ export default function ReviewCard() {
         />
         <Box>
           <Heading as="h3" size="md">
-            M. Satria Herman
+            {name}
           </Heading>
-          <Text>Frontend Developer</Text>
+          <Text>{title}</Text>
         </Box>
       </Flex>
       <Box marginY={2}>
-        <StarRatings rating={4} starDimension="20px" starRatedColor="orange" numberOfStars={6} name="rating" />
+        <StarRatings rating={stars} starDimension="20px" starRatedColor="orange" numberOfStars={6} name="rating" />
       </Box>
-      <Text marginTop={4}>
-        Good Communication. Completion of project is so fast. I was amazed to Satria's skill and my project done with great result of satria's job. I recommend to hire Satria for your project
-      </Text>
+      <Text marginTop={4}>{description}</Text>
     </Box>
   );
 }
