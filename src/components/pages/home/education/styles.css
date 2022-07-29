@@ -1,0 +1,11 @@
+.work-list-bullet {
+  position: absolute;
+  top: 0px;
+  border: 2px solid #fff;
+  right: -28px;
+  width: 17px;
+  height: 17px;
+  border-radius: 100px;
+  background-color: rgb(49, 130, 206);
+  box-shadow: 0px 0px 12px #b3b9bb;
+}

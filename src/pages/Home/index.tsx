@@ -15,6 +15,7 @@ import Footer from "@src/components/pages/home/footer";
 import HomePortfolio from "@src/components/pages/home/portfolio";
 import HomeProfile from "@src/components/pages/home/profile";
 import { useState } from "react";
+import Education from "@src/components/pages/home/education";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
@@ -59,42 +60,6 @@ export default function Home() {
             Experience
           </Heading>
 
-          {/* <Flex gap={5} flexDirection={LargeScreen ? "row" : "column"} justifyContent="center" marginTop={15}>
-            <Box boxShadow="0 5px 15px #dce4e6" padding="20px 10px" width="full" maxWidth="500px">
-              <Heading as="h3" size="md" textAlign="center" color={blueSchemes}>
-                {" "}
-                Education
-              </Heading>
-
-              <UnorderedList listStyleType="none" marginTop={6} display="flex" flexDirection="column" rowGap={3}>
-                <ListItem>
-                  <Box display="flex" alignItems="center" columnGap={2}>
-                    <Icon as={FaCheckCircle} color={blueSchemes} />
-                    <Text fontWeight="semibold">SDN 4 Srobyong</Text>
-                  </Box>
-                  <Box marginLeft={6} marginTop={1}>
-                    <Text color="gray.600">2009 - 2015</Text>
-                  </Box>
-                </ListItem>
-                <ListItem>
-                  <Box display="flex" alignItems="center" columnGap={2}>
-                    <Icon as={FaCheckCircle} color={blueSchemes} />
-                    <Text fontWeight="semibold">SMPN 1 Mlonggo</Text>
-                  </Box>
-                  <Box marginLeft={6} marginTop={1}>
-                    <Text color="gray.600">2009 - 2015</Text>
-                  </Box>
-                </ListItem>
-              </UnorderedList>
-            </Box>
-            <Box boxShadow="0 1px 15px #dce4e6" padding="20px 25px" width="full" maxWidth="500px" color={blueSchemes}>
-              <Heading as="h3" size="md" textAlign="center">
-                {" "}
-                Work
-              </Heading>
-            </Box>
-          </Flex> */}
-
           <Tabs variant="soft-rounded" margin="20px auto" colorScheme="gray" paddingX="0">
             <TabList padding={1} color="white" justifyContent="center" width="fit-content" rounded="full" marginX="auto">
               <Tab>Work Experience</Tab>
@@ -106,13 +71,13 @@ export default function Home() {
                 <WorkExperience />
               </TabPanel>
               <TabPanel>
-                <p>one!</p>
+                <Education />
               </TabPanel>
             </TabPanels>
           </Tabs>
         </Box>
 
-        <HomePortfolio isShowTitle title="Portfolio" />
+        <HomePortfolio isShowTitle itemsPerRow={3} title="Portfolio" />
 
         <Box padding={LargeScreen ? "120px 0" : "50px 0"}>
           <Text textAlign="center">Skills</Text>
