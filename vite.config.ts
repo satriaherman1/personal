@@ -26,6 +26,7 @@ export default defineConfig({
         short_name: "Satria",
         start_url: "https://satriaherman.com",
         description: "Satria Herman Portfolio",
+        display: "standalone",
         theme_color: "#ffffff",
         icons: [
           {
