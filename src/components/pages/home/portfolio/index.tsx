@@ -48,7 +48,7 @@ export default function HomePortfolio({ title, isShowTitle, itemsPerRow, justify
                       Detail <Icon marginLeft={2} as={FaArrowRight}></Icon>
                     </Text>
                   }
-                  image={d.attributes.cover.data[0].attributes.url}
+                  image={d.attributes.cover.data.attributes.url}
                   title={d.attributes.Title}
                 />
               </Link>
