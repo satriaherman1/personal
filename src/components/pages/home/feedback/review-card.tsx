@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react";
-import { MeImage } from "@src/config/pathImage";
 import StarRatings from "react-star-ratings";
 
 export default function ReviewCard() {
@@ -9,7 +8,7 @@ export default function ReviewCard() {
   return (
     <Box padding="20px 25px" rounded="lg" bg={bg} boxShadow={boxShadow}>
       <Flex padding="8px 12px" columnGap={3}>
-        <Image src={MeImage} width="50px" height={"50px"} rounded="full" display="block" />
+        <Image src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg" width="50px" height={"50px"} rounded="full" display="block" />
         <Box>
           <Heading as="h3" size="md">
             M. Satria Herman

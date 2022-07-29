@@ -1,5 +1,4 @@
 import { Box, Button, Container, Flex, Heading, Icon, Image, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
-import { MeImage } from "@src/config/pathImage";
 import { Link } from "react-router-dom";
 import { FaRegAddressBook, FaRegUser, FaRegFolder, FaArrowRight, FaRegListAlt, FaNodeJs, FaWordpress, FaCheck } from "react-icons/fa";
 import WorkExperience from "@src/components/pages/home/work-experience";
