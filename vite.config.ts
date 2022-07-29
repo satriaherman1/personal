@@ -34,7 +34,7 @@ export default defineConfig({
             type: "image/png",
           },
           {
-            src: "fhttps://res.cloudinary.com/dbg3ckwtz/image/upload/v1659078426/portfolio/favicon/apple-icon-180x180_krriu1.png",
+            src: "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1659078426/portfolio/favicon/apple-icon-180x180_krriu1.png",
             sizes: "180x180",
             type: "image/png",
           },
