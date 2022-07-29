@@ -49,7 +49,7 @@ export default function HomeProfile() {
         <Box as="span" fontWeight={700} fontSize={32} ref={el}></Box>
         <Text marginTop={6}>
           I'm Frontend Developer that ever worked on 2 companies <a href="">Clodeo</a> and <a href="">Brainmatics</a>. I've been working as a developer for 1 years and i have a such skills like :{" "}
-          <b>React</b>, <b>PHP</b>, <b>JavaScript</b>, <b>Nodejs</b>, <b>Laravel</b>. I also working as Freelance Frontend Developer for around 2 years
+          React, PHP, JavaScript, Nodejs, Laravel. I also working as Freelance Frontend Developer for around 2 years
         </Text>
 
         <Flex columnGap={3}>
