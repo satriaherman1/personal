@@ -2,7 +2,6 @@
   padding: 8px;
   height: fit-content;
   line-height: 0;
-
   border-radius: 100px;
 }
 
@@ -47,13 +46,29 @@
 .float-button-container.hide {
   left: 98.5vw;
   transform: translateX(0);
+  animation: fadeFloat 1.2s 1;
 }
 
 .float-button.hide-button {
   background: linear-gradient(to top, #83aec4, #376da0);
-
   position: absolute;
-  left: -26%;
-  padding: 18px 17px;
+  left: -24%;
+  padding: 18px 15px;
   border-radius: 10px 0px 0px 10px;
+}
+
+@keyframes fadeFloat {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 98.5vw;
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
