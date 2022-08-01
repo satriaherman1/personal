@@ -16,15 +16,7 @@ export default function ReviewCard({ name, title, stars, description, photo }: I
   return (
     <Box padding="20px 25px" rounded="lg" bg={bg} boxShadow={boxShadow}>
       <Flex padding="8px 12px" columnGap={3}>
-        <Image
-          loading="lazy"
-          fallback={<SkeletonCircle width="50px" height="50px" />}
-          src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1657165683/me_rzvwwq.jpg"
-          width="50px"
-          height="50px"
-          rounded="full"
-          display="block"
-        />
+        <Image loading="lazy" fallback={<SkeletonCircle width="50px" height="50px" />} src={photo} width="50px" height="50px" rounded="full" display="block" />
         <Box>
           <Heading as="h3" size="md">
             {name}
