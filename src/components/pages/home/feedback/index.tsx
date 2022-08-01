@@ -40,7 +40,17 @@ export default function Feedback() {
         className="mySwiper"
       >
         {!feedbacks ? (
-          <SkeletonReview />
+          <>
+            <SwiperSlide>
+              <SkeletonReview />
+            </SwiperSlide>
+            <SwiperSlide>
+              <SkeletonReview />
+            </SwiperSlide>
+            <SwiperSlide>
+              <SkeletonReview />
+            </SwiperSlide>
+          </>
         ) : (
           feedbacks?.data?.data.map((s: any) => (
             <SwiperSlide>
