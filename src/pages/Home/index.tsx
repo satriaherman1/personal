@@ -15,6 +15,7 @@ import HomePortfolio from "@src/components/pages/home/portfolio";
 import HomeProfile from "@src/components/pages/home/profile";
 import { useState } from "react";
 import Education from "@src/components/pages/home/education";
+import Announcement from "@src/components/pages/home/Announcement";
 
 export default function Home() {
   const [LargeScreen] = useMediaQuery("(min-width: 1024px)");
@@ -50,6 +51,7 @@ export default function Home() {
   return (
     <>
       <ParticleBg />
+      <Announcement />
       <Container maxW="1200px" position="relative">
         <HomeProfile />
 
