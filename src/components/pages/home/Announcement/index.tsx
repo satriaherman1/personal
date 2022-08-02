@@ -21,7 +21,9 @@ export default function Announcement() {
         <ModalFooter>
           <Flex gap={3}>
             <Button onClick={onClose}>Close</Button>
-            <Button colorScheme="red">Visit</Button>
+            <a href="https://blog.satriaherman.com">
+              <Button colorScheme="red">Visit</Button>
+            </a>
           </Flex>
         </ModalFooter>
       </ModalContent>
