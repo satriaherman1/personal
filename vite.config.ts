@@ -5,7 +5,7 @@ const path = require("path");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  assetsInclude: ["ads.txt"],
+  assetsInclude: ["**/*.txt"],
   plugins: [
     react(),
     VitePWA({
