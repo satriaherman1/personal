@@ -1,5 +1,5 @@
-import { Box, Button, Flex, Heading, Image, Skeleton, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { Box, Button, Flex, Image, Skeleton, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { DownloadIcon } from "@chakra-ui/icons";
 import "./styles.css";
@@ -53,7 +53,12 @@ export default function HomeProfile() {
         </Text>
 
         <Flex columnGap={3}>
-          <Button onClick={() => window.open("https://satria-herman.web.app/doc/cv.pdf", "download")} leftIcon={<DownloadIcon />} marginTop={5} colorScheme="blue">
+          <Button
+            onClick={() => window.open("https://drive.google.com/file/d/1BWscPxcNeEYELn_e96rFdqbhsx4_f08o/view?usp=sharing", "download")}
+            leftIcon={<DownloadIcon />}
+            marginTop={5}
+            colorScheme="blue"
+          >
             Download CV
           </Button>
           <Button onClick={redirectWa} variant="outline" marginTop={5} colorScheme="blue">
