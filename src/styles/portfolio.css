@@ -1,0 +1,13 @@
+.portfolio-card {
+  @apply bg-sh-gradient w-full h-full flex items-center justify-center;
+
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.portfolio-card.active {
+  max-height: 700px;
+}
