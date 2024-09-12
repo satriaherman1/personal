@@ -38,7 +38,7 @@ export default function Navbar({ className }: Props) {
   return (
     <nav
       className={classNames(
-        "z-[999] transition-colors py-2 duration-300 dark:text-white", // Smooth transition effect
+        "z-[999] transition-colors md:py-2 duration-300 dark:text-white", // Smooth transition effect
         className,
         { "bg-white shadow-md dark:bg-slate-900 ": isScrolled } // Add background color and shadow when scrolled
       )}
