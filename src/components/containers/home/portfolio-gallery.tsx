@@ -1,33 +1,29 @@
 "use client";
 
+import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import DecoratorDown from "@src/components/commons/decorator-down";
 import DecoratorUp from "@src/components/commons/decorator-up";
 import classNames from "classnames";
+import Link from "next/link";
 import { useState } from "react";
 
-const portfolioList = [
-  {
-    name: "Shipdeo",
-    company: "Clodeo",
-    url: "/portfolio/shipdeo.png",
-  },
-  {
-    name: "Binmas Online System",
-    company: "Brainmatics",
-    url: "/portfolio/bos.png",
-  },
-  {
-    name: "Volta Indonesia",
-    company: "Clodeo",
-    url: "/portfolio/volta.png",
-  },
-];
+type Props = {
+  portfolioList: Portfolio[];
+};
+
+type PortfolioCardProps = {
+  title: string;
+  url: string;
+  company: string;
+  seeDetails: string;
+};
 
 const PortfolioCard = ({
-  name,
   url,
+  title,
   company,
-}: (typeof portfolioList)[number]) => {
+  seeDetails,
+}: PortfolioCardProps) => {
   const [isShowText, setIsShowText] = useState(false);
 
   const handleMouseOver = () => {
@@ -68,13 +64,16 @@ const PortfolioCard = ({
       >
         <section className="absolute flex flex-col gap-y-4 md:flex-row w-full justify-between bottom-5 px-5">
           <div>
-            <h2 className="text-white text-lg font-bold">{name}</h2>
+            <h2 className="text-white text-lg font-bold">{title}</h2>
             <span className="text-white font-light">{company}</span>
           </div>
           <div className="flex gap-x-5">
-            <button className="btn btn-small h-fit bg-white  font-semibold !text-sm btn-primary border-white text-black ">
+            <Link
+              href={seeDetails}
+              className="btn btn-small h-fit bg-white  font-semibold !text-sm btn-primary border-white text-black "
+            >
               See Details
-            </button>
+            </Link>
             <button className="btn btn-small h-fit font-semibold !text-sm btn-outlined border-white text-white border">
               View Project
             </button>
@@ -85,7 +84,7 @@ const PortfolioCard = ({
   );
 };
 
-export default function PortfolioGallery() {
+export default function PortfolioGallery({ portfolioList }: Props) {
   return (
     <div className="relative dark:bg-slate-900 dark:text-white">
       <DecoratorUp className="absolute right-0 -z-10 fill-black dark:fill-slate-100 dark:z-0 " />
@@ -97,12 +96,13 @@ export default function PortfolioGallery() {
         </h1>
 
         <section className="mt-12 flex flex-wrap gap-6 justify-between">
-          {portfolioList.map(({ url, name, company }, index) => (
+          {portfolioList.map(({ preview, title, company, slug }, index) => (
             <PortfolioCard
               key={index}
-              name={name}
-              url={url}
+              title={title}
+              url={preview[0].url}
               company={company}
+              seeDetails={`/portfolio/${slug}`}
             />
           ))}
         </section>
