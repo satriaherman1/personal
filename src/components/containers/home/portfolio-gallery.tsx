@@ -1,8 +1,6 @@
 "use client";
 
 import { Portfolio } from "@src/app/portfolio/[slug]/page";
-import DecoratorDown from "@src/components/commons/decorator-down";
-import DecoratorUp from "@src/components/commons/decorator-up";
 import classNames from "classnames";
 import Link from "next/link";
 import { useState } from "react";
@@ -86,12 +84,9 @@ const PortfolioCard = ({
 
 export default function PortfolioGallery({ portfolioList }: Props) {
   return (
-    <div className="relative dark:bg-slate-900 dark:text-white">
-      <DecoratorUp className="absolute right-0 -z-10 fill-black dark:fill-slate-100 dark:z-0 " />
-      <DecoratorDown className="absolute hidden md:block bottom-0 left-0 -z-10 dark:z-0 fill-black dark:fill-slate-100" />
-
+    <>
       <div className="container px-4 py-[100px]">
-        <h1 className=" underline font-bold text-2xl md:text-4xl text-center">
+        <h1 className=" underline font-bold text-3xl md:text-4xl text-center">
           Portfolio
         </h1>
 
@@ -107,6 +102,6 @@ export default function PortfolioGallery({ portfolioList }: Props) {
           ))}
         </section>
       </div>
-    </div>
+    </>
   );
 }

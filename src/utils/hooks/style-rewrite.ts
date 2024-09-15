@@ -13,7 +13,13 @@ export default function useStyleRewrite() {
     const links = document.querySelectorAll(".html-rendered a");
     const orderedLists = document.querySelectorAll(".html-rendered ol");
 
-    paragraphs.forEach((p) => {
+    const bodyWrapper: any = document.querySelector(".html-rendered");
+
+    if (bodyWrapper) {
+      bodyWrapper.style.fontSize = "19px";
+    }
+
+    paragraphs.forEach((p: any) => {
       p.classList.add("mt-6");
     });
 

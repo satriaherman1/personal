@@ -50,7 +50,7 @@ export default function Testimonials() {
       <DecoratorLeft className="absolute  top-0 right-0 rotate-180" />
 
       <div className="container px-4">
-        <h1 className="text-white underline font-bold text-2xl md:text-4xl text-center mb-8">
+        <h1 className="text-white underline font-bold text-3xl md:text-4xl text-center mb-8">
           Testimonials
         </h1>
 

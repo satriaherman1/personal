@@ -17,7 +17,7 @@ export default function PortfolioContent({
 }: Portfolio) {
   useStyleRewrite();
   return (
-    <div>
+    <div className="dark:bg-slate-900 dark:text-white">
       <Navbar className="fixed bottom-0 md:top-0 w-full h-fit" />
 
       <main className="container max-w-[800px] py-3 md:pt-20 px-4">
@@ -30,7 +30,7 @@ export default function PortfolioContent({
         </Link>
         <section className="mt-5">
           <h1 className="text-2xl font-semibold">{title}</h1>
-          <span className="text-gray-600">{company}</span>
+          <span className="text-gray-600 dark:text-gray-300 ">{company}</span>
         </section>
 
         <Image
@@ -42,18 +42,18 @@ export default function PortfolioContent({
           src={preview[0].url}
         />
 
-        <caption className="whitespace-nowrap mx-auto block mt-2 text-gray-500">
+        <caption className="whitespace-nowrap mx-auto block mt-2 text-gray-500 dark:text-gray-200">
           {slug}
         </caption>
 
         <div
-          className="mt-7 html-rendered"
+          className="mt-7 html-rendered "
           dangerouslySetInnerHTML={{ __html: description.html }}
         ></div>
 
         <section className="mt-16">
-          <span className="font-semibold">Share This Project</span>
-          <div className="flex mt-3 gap-x-4">
+          <span className="font-semibold text-2xl">Share This Project : </span>
+          <div className="flex mt-5 gap-x-4">
             <a
               href="/"
               className="p-3 rounded-lg text-lg bg-pink-500 text-white"
@@ -72,7 +72,7 @@ export default function PortfolioContent({
             >
               <BsLinkedin />
             </a>
-            <button className="p-3 rounded-lg text-lg bg-gray-100">
+            <button className="p-3 rounded-lg text-lg bg-gray-100 dark:text-black">
               <BiShareAlt />
             </button>
           </div>

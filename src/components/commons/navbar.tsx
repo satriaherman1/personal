@@ -6,6 +6,7 @@ import Logo from "@src/components/commons/logo";
 import classNames from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { GrClose } from "react-icons/gr";
 import { RiMenu3Line } from "react-icons/ri";
 
 type Props = {
@@ -104,7 +105,14 @@ export default function Navbar({ className }: Props) {
         </span>
 
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <RiMenu3Line fontSize={20} className="dark:text-white" />
+          {isMobileMenuOpen ? (
+            <GrClose fontSize={20} className="dark:text-white duration-200" />
+          ) : (
+            <RiMenu3Line
+              fontSize={20}
+              className="dark:text-white duration-200"
+            />
+          )}
         </button>
       </div>
     </nav>

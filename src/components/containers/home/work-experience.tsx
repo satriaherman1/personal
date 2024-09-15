@@ -49,7 +49,7 @@ export default function WorkExperience() {
 
       {/* about */}
       <section className="text-white  pb-20 mb-12 container px-4">
-        <h1 className=" underline font-bold text-2xl md:text-4xl text-left">
+        <h1 className=" underline font-bold text-3xl md:text-4xl text-left">
           About Me
         </h1>
 
@@ -87,7 +87,7 @@ export default function WorkExperience() {
       {/* end about */}
 
       <div className="container px-4 z-10 relative">
-        <h1 className="text-white underline font-bold text-2xl md:text-4xl text-center">
+        <h1 className="text-white underline font-bold text-3xl md:text-4xl text-center">
           Work Experience
         </h1>
 
