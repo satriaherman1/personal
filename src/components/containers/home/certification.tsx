@@ -14,6 +14,7 @@ const certificationList = [
     name: "3rd Places Web Design Competition",
     commitee: "Universitas Atma Jaya Yogyakarta",
     category: "competition",
+    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
 
     year: 2020,
     description:
@@ -23,6 +24,7 @@ const certificationList = [
     name: "Javascript",
     commitee: "Sololearn",
     category: "certification",
+    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
 
     year: 2019,
     description:
@@ -32,10 +34,36 @@ const certificationList = [
     name: "HTML",
     commitee: "Sololearn",
     category: "certification",
+    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
 
     year: 2019,
     description:
       "Learning a Javascript basic including : data structure, variables, function,condition & looping, Document Object Model, ",
+  },
+  {
+    name: "React + Redux",
+    commitee: "Sololearn",
+    category: "certification",
+    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
+    year: 2022,
+    description:
+      "Learning a Javascript basic including : data structure, variables, function,condition & looping, Document Object Model, ",
+  },
+  {
+    name: "Web Development Fundamentals",
+    commitee: "Sololearn",
+    category: "certification",
+    url: "https://www.sololearn.com/Certificate/CT-G6KVU1EM/png",
+    year: 2022,
+    description: "Learning fundamentals of web like :  ",
+  },
+  {
+    name: "PHP",
+    commitee: "Sololearn",
+    category: "certification",
+    url: "https://www.sololearn.com/Certificate/CT-8JF3QOCK/png",
+    year: 2022,
+    description: "Learning fundamentals of web like :  ",
   },
 ];
 
@@ -70,9 +98,12 @@ export default function Certification() {
               </span>
             </div>
 
-            <button className=" md:self-end btn btn-primary btn-small h-fit w-fit flex gap-x-1 items-center !text-sm">
+            <a
+              href={certification.url}
+              className=" md:self-end btn btn-primary btn-small h-fit w-fit flex gap-x-1 items-center !text-sm"
+            >
               <MdArrowOutward /> View Certification
-            </button>
+            </a>
           </section>
         ))}
       </section>
