@@ -49,6 +49,7 @@ export default function Certification() {
       <section className="flex flex-col gap-y-2 mt-20 w-full relative z-10">
         {certificationList.map((certification, key) => (
           <section
+            key={certification.name}
             className={classNames({
               "flex gap-x-4 gap-y-2 py-3 flex-col md:flex-row justify-between ":
                 true,

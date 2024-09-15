@@ -31,7 +31,7 @@ export default function LoadingOverlay({ className }: Props) {
   return (
     <div
       className={classNames(
-        "fixed inset-0 bg-white z-[1000] flex items-center justify-center duration-300 ",
+        "fixed inset-0 bg-white z-[1000] flex items-center justify-center duration-300 overflow-hidden",
         className
       )}
     >
