@@ -16,7 +16,7 @@ export default function Footer({ className }: Props) {
         className
       )}
     >
-      <DecoratorUp className="absolute top-0 right-0 z-0 " />
+      <DecoratorUp className="absolute top-0 right-0 z-0 fill-black dark:fill-slate-100" />
 
       <div className="flex  container px-4">
         <section>

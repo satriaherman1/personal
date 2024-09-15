@@ -69,7 +69,7 @@ export default function Certification() {
               </span>
             </div>
 
-            <button className=" md:self-end btn btn-primary btn-small h-fit w-fit flex gap-x-3 items-center !text-sm">
+            <button className=" md:self-end btn btn-primary btn-small h-fit w-fit flex gap-x-1 items-center !text-sm">
               <MdArrowOutward /> View Certification
             </button>
           </section>
