@@ -1,5 +1,4 @@
-import DecoratorDown from "@src/components/commons/decorator-down";
-import DecoratorUp from "@src/components/commons/decorator-up";
+import DecoratorLeft from "@src/components/commons/decorator-left";
 import Logo from "@src/components/commons/logo";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
@@ -36,9 +35,13 @@ export default function LoadingOverlay({ className }: Props) {
         className
       )}
     >
-      <DecoratorUp className="absolute top-0 right-0 -z-10 fill-black dark:fill-slate-100 dark:z-0 " />
-      <DecoratorDown className="absolute hidden md:block bottom-0 left-0 -z-10 dark:z-0 fill-black dark:fill-slate-100" />
-      <div className="w-[60vw] max-w-[400px]">
+      <DecoratorLeft className="absolute left-0 -bottom-10" fill="#c0c4c1" />
+      <DecoratorLeft
+        className="absolute right-0 -top-10 rotate-180"
+        fill="#c0c4c1"
+      />
+
+      <div className="w-[60vw] max-w-[300px]">
         {/* Progress Bar Container */}
         <div className="w-full rounded-[100px] mx-auto">
           <div className="flex gap-x-4 mx-auto items-center mb-4 justify-center">
@@ -47,7 +50,8 @@ export default function LoadingOverlay({ className }: Props) {
           </div>
           {/* <span className="text-center text-lg mb-2">Loading</span> */}
           {/* Progress Bar */}
-          <div className="p-1 rounded-full border-2 border-black relative">
+          <div className="p-1 rounded-full border-2 border-black relative overflow-hidden">
+            <div className="w-[calc(100%-8px)] h-2 rounded-full bg-gray-200 absolute left-1 "></div>
             <div
               className="loading-progress-bar"
               style={{ width: `${progress}%` }}
