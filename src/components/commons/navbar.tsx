@@ -41,7 +41,10 @@ export default function Navbar({ className }: Props) {
       className={classNames(
         "z-[999] transition-colors md:py-2 duration-300 dark:text-white", // Smooth transition effect
         className,
-        { "bg-white shadow-md dark:bg-slate-900 ": isScrolled } // Add background color and shadow when scrolled
+        {
+          "bg-white shadow-[0px_5px_60px_-15px_rgba(0,0,0,0.2)] dark:bg-slate-900 ":
+            isScrolled,
+        } // Add background color and shadow when scrolled
       )}
     >
       {/* Desktop Navbar */}
@@ -95,7 +98,7 @@ export default function Navbar({ className }: Props) {
 
       {/* end menubar */}
       {/* Mobile Navbar */}
-      <div className="md:hidden container justify-between items-center flex p-4 dark:bg-slate-800 bg-white shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.9)] z-[1000] relative">
+      <div className="md:hidden container justify-between items-center flex p-4 dark:bg-slate-800 bg-white shadow-[30px_35px_60px_-15px_rgba(0,0,0,0.7)] z-[1000] relative">
         <a href="/" className="text-xl font-bold">
           <Logo width="35" height="35" />
         </a>

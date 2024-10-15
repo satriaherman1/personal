@@ -4,13 +4,11 @@ import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import Navbar from "@src/components/commons/navbar";
 import useStyleRewrite from "@src/utils/hooks/style-rewrite";
 import Image from "next/image";
-import { BiShareAlt } from "react-icons/bi";
-import { BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
 export default function PortfolioContent({
   title,
   company,
-  slug,
+
   preview,
   description,
   simpleDescription,
@@ -32,16 +30,17 @@ export default function PortfolioContent({
           Back
         </Link> */}
 
-        <Image
-          width="0"
-          height={0}
-          sizes="100vw"
-          className="w-[100%] z-2 mt-5 rounded-lg"
-          alt=""
-          src={preview[0].url}
-        />
+        <div className=" relative w-full h-[500px]">
+          <Image
+            fill
+            className=" z-2 mt-5 rounded-lg"
+            objectFit="cover"
+            alt=""
+            src={preview[0].url}
+          />
+        </div>
 
-        <section className="mt-5">
+        <section className="mt-20">
           <h1 className="text-2xl font-semibold">{title}</h1>
           <span className="text-gray-600 dark:text-gray-300 ">{company}</span>
         </section>
@@ -74,7 +73,7 @@ export default function PortfolioContent({
           style={{ fontSize: "19px" }}
         ></div>
 
-        <section className="mt-16">
+        {/* <section className="mt-16">
           <span className="font-semibold text-2xl">Share This Project : </span>
           <div className="flex mt-5 gap-x-4">
             <a
@@ -99,7 +98,7 @@ export default function PortfolioContent({
               <BiShareAlt />
             </button>
           </div>
-        </section>
+        </section> */}
 
         <div className="h-20"></div>
       </main>

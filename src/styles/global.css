@@ -11,3 +11,7 @@
     text-wrap: balance;
   }
 }
+
+.html-rendered p {
+  @apply text-gray-600;
+}

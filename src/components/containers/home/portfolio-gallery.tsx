@@ -4,7 +4,6 @@ import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import { truncateText } from "@src/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 type Props = {
@@ -22,12 +21,10 @@ type PortfolioCardProps = {
 const PortfolioCard = ({
   url,
   title,
-  company,
+
   seeDetails,
   description,
 }: PortfolioCardProps) => {
-  const [isShowText, setIsShowText] = useState(false);
-
   return (
     <div className="flex border rounded-2xl w-full basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)]">
       <Image
@@ -67,10 +64,7 @@ export default function PortfolioGallery({ portfolioList }: Props) {
 
         <section className="mt-12 flex flex-wrap gap-6 justify-between">
           {portfolioList.map(
-            (
-              { preview, title, company, slug, description, simpleDescription },
-              index
-            ) => (
+            ({ preview, title, company, slug, simpleDescription }, index) => (
               <PortfolioCard
                 key={index}
                 title={title}
