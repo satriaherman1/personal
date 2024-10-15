@@ -28,9 +28,13 @@ const GET_PORTFOLIO_BY_SLUG = `
         url
       }
       company
-        description {
-            html
-        }
+      description {
+          html
+      }
+      client
+      role
+      year
+      simpleDescription
     }
   }
 `;
@@ -43,7 +47,11 @@ export type Portfolio = {
   preview: {
     url: string;
   }[];
+  simpleDescription: string;
   description: any;
+  client: string;
+  role: string;
+  year: string;
 };
 
 type PageParams = {

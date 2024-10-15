@@ -6,7 +6,6 @@ import Navbar from "@src/components/commons/navbar";
 import Certification from "@src/components/containers/home/certification";
 import Hero from "@src/components/containers/home/hero";
 import PortfolioGallery from "@src/components/containers/home/portfolio-gallery";
-import Testimonials from "@src/components/containers/home/testimonials";
 import WorkExperience from "@src/components/containers/home/work-experience";
 import { hygraphClient } from "@src/utils/graphql-client";
 
@@ -17,6 +16,7 @@ const GET_ALL_PORTFOLIOS = `
         slug
         title
         company
+        simpleDescription
         preview{
             url
         }
@@ -44,7 +44,7 @@ export default async function Home() {
 
         <PortfolioGallery portfolioList={portfolios} />
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );
