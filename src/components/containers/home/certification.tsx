@@ -85,7 +85,7 @@ export default function Certification() {
             })}
           >
             <div className="basis-1/5">
-              <span className="text-2xl font-bold capitalize text-gray-600">
+              <span className="text-2xl font-bold capitalize text-gray-600 dark:text-gray-300">
                 {certification.category}
               </span>
             </div>

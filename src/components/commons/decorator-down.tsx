@@ -17,7 +17,7 @@ export default function DecoratorDown({ className }: Props) {
         clip-rule="evenodd"
         d="M373.802 326H594C594 145.956 447.821 0 267.5 0C87.1789 0 -59 145.956 -59 326H161.198C161.198 267.38 208.79 219.86 267.5 219.86C326.21 219.86 373.802 267.38 373.802 326Z"
         // fill="#FFFBFB"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
     </svg>
   );

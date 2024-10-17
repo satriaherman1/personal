@@ -6,9 +6,10 @@ import { LuMail } from "react-icons/lu";
 
 type Props = {
   className?: string;
+  maxWClassName?: string;
 };
 
-export default function Footer({ className }: Props) {
+export default function Footer({ className, maxWClassName }: Props) {
   return (
     <footer
       className={classNames(
@@ -18,7 +19,7 @@ export default function Footer({ className }: Props) {
     >
       <DecoratorUp className="absolute top-0 right-0 z-0 fill-black dark:fill-slate-100" />
 
-      <div className="flex  container px-4">
+      <div className={classNames("flex  container px-4", maxWClassName)}>
         <section>
           {/* <Logo className="block" /> */}
 

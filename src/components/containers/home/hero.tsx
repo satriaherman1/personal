@@ -3,6 +3,7 @@
 import DecoratorDown from "@src/components/commons/decorator-down";
 import DecoratorUp from "@src/components/commons/decorator-up";
 import LoadingOverlay from "@src/components/commons/loading-overlay";
+import { redirectToWa } from "@src/utils/function";
 import classNames from "classnames";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -50,9 +51,12 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-5 mt-8">
-              <a href="" className="btn btn-primary inline-block w-fit">
+              <button
+                onClick={redirectToWa}
+                className="btn btn-primary inline-block w-fit"
+              >
                 Get In Touch
-              </a>
+              </button>
               <a
                 href=""
                 className="btn btn-outlined flex items-center gap-x-2  w-fit"

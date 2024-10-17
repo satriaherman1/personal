@@ -54,19 +54,22 @@ export default function WorkExperience() {
         </h1>
 
         <p className="mt-10">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus
-          id similique quisquam odit aliquid impedit ad at in veniam repudiandae
-          quas consectetur, totam sint itaque, ullam excepturi ut voluptates
-          voluptatum quam aspernatur temporibus molestiae! Vitae rem dolorem
-          vero ut. Sunt voluptatem nulla unde obcaecati perspiciatis illum esse,
-          magnam ut? Error eveniet tempora fugiat recusandae ullam assumenda
+          I am a Software Engineer with 3 years experience in Software
+          Development. My Focus is on Frontend Development, but I also have
+          experience in Backend Development. I have worked with various
+          companies and clients, and I have a good understanding of the software
+          development process. I am passionate about technology and always eager
+          to learn new things. I am a team player and always ready to help my
+          team members. I am a quick learner and always ready to take on new
+          challenges.
           <br /> <br />
-          aliquid nemo sint consequatur nam, odio incidunt corrupti, veniam
-          porro expedita voluptates? Quos a aliquid earum doloremque illum
-          reprehenderit nam! Exercitationem, repellat? Laudantium earum enim
-          culpa voluptatem illum sint quisquam corrupti vero, doloremque
-          explicabo corporis minima commodi debitis eligendi exercitationem
-          inventore error dicta eos.
+          Currently I'm Working on 22222-Labs as a Software Engineer. My
+          Responsibility is to develop and maintain the frontend of the
+          application (Web and Mobile). I also work closely with the backend
+          team to ensure that the application is running smoothly. I am also
+          responsible for writing unit tests and ensuring that the code is of
+          high quality. I am also responsible for mentoring junior developers
+          and helping them grow in their careers.
         </p>
 
         <div className="flex gap-x-7 mt-8">

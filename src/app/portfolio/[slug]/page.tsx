@@ -1,4 +1,5 @@
 import PortfolioContent from "@src/app/portfolio/[slug]/content";
+import Footer from "@src/components/commons/footer";
 import { hygraphClient } from "@src/utils/graphql-client";
 
 const GET_ALL_PORTFOLIOS = `
@@ -77,5 +78,10 @@ export default async function Page({ params }: PageParams) {
     portfolio: Portfolio;
   };
 
-  return <PortfolioContent {...portfolio} />;
+  return (
+    <>
+      <PortfolioContent {...portfolio} />
+      <Footer maxWClassName="max-w-[800px]" />
+    </>
+  );
 }

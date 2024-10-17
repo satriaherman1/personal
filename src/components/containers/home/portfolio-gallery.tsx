@@ -25,7 +25,7 @@ const PortfolioCard = ({
   description,
 }: PortfolioCardProps) => {
   return (
-    <div className="flex flex-col md:flex-row border rounded-2xl w-full basis-full md:basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)]">
+    <div className="flex flex-col md:flex-row border rounded-2xl w-full basis-full md:basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)] dark:bg-slate-800 dark:border-gray-500 relative z-10">
       <img
         src={url}
         className="rounded-t-2xl rounded-b-2xl w-full md:w-[300px] h-[280px] md:h-full"
@@ -36,7 +36,7 @@ const PortfolioCard = ({
         {/* <span className="text-gray-500 mt-2">{company}</span> */}
 
         <div
-          className="mt-9 text-gray-600 font-medium"
+          className="mt-9 text-gray-600 dark:text-gray-400 font-medium"
           dangerouslySetInnerHTML={{ __html: truncateText(description, 140) }}
         ></div>
 
