@@ -2,7 +2,6 @@
 
 import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import { truncateText } from "@src/utils/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -26,13 +25,11 @@ const PortfolioCard = ({
   description,
 }: PortfolioCardProps) => {
   return (
-    <div className="flex border rounded-2xl w-full basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)]">
-      <Image
+    <div className="flex flex-col md:flex-row border rounded-2xl w-full basis-full md:basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)]">
+      <img
         src={url}
-        alt={title}
-        width={300}
-        height={180}
-        className="rounded-t-2xl rounded-b-2xl"
+        className="rounded-t-2xl rounded-b-2xl w-full md:w-[300px] h-[280px] md:h-full"
+        alt="portfolio"
       />
       <section className="px-7 py-6">
         <h2 className="font-bold text-2xl">{title}</h2>
