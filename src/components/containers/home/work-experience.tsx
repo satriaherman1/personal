@@ -63,7 +63,7 @@ export default function WorkExperience() {
           team members. I am a quick learner and always ready to take on new
           challenges.
           <br /> <br />
-          Currently I'm Working on 22222-Labs as a Software Engineer. My
+          Currently I&apos;m Working on 22222-Labs as a Software Engineer. My
           Responsibility is to develop and maintain the frontend of the
           application (Web and Mobile). I also work closely with the backend
           team to ensure that the application is running smoothly. I am also
