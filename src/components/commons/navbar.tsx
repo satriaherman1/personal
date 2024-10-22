@@ -57,9 +57,11 @@ export default function Navbar({ className }: Props) {
           </section>
 
           <section className="flex gap-x-10 text-xl">
-            <a href="/">Home</a>
-            <a href="/">Projects</a>
-            <a href="/">Blogs</a>
+            <Link href="/">Home</Link>
+            <Link href="/">Projects</Link>
+            <a href="https://blog.satriaherman.com" target="_blank">
+              Blogs
+            </a>
           </section>
 
           {/* <button className="btn btn-outlined btn-small">Get In Touch</button> */}
@@ -90,7 +92,11 @@ export default function Navbar({ className }: Props) {
           <Link href="/" className=" text-3xl px-4 ">
             Projects
           </Link>
-          <Link href="/" className=" text-3xl px-4 ">
+          <Link
+            href="https://blog.satriaherman.com"
+            target="_blank"
+            className=" text-3xl px-4 "
+          >
             Blogs
           </Link>
         </div>
