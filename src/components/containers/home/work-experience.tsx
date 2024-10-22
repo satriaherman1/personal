@@ -73,16 +73,32 @@ export default function WorkExperience() {
         </p>
 
         <div className="flex gap-x-7 mt-8">
-          <a className="text-4xl hover:scale-125 duration-300 cursor-pointer">
+          <a
+            href="https://linkedin.com/in/muhammad-satria-herman"
+            className="text-4xl hover:scale-125 duration-300 cursor-pointer"
+            target="_blank"
+          >
             <ImLinkedin />
           </a>
-          <a className="text-4xl hover:scale-125 duration-300 cursor-pointer">
+          <a
+            href="https://github.com/satriaherman1"
+            target="_blank"
+            className="text-4xl hover:scale-125 duration-300 cursor-pointer"
+          >
             <ImGithub />
           </a>
-          <a className="text-4xl hover:scale-125 duration-300 cursor-pointer">
+          target="_blank"
+          <a
+            href="https://www.instagram.com/__senandika___?igsh=MTM5a3dqYms1OGxhdA=="
+            className="text-4xl hover:scale-125 duration-300 cursor-pointer"
+          >
             <BsInstagram />
           </a>
-          <a className="text-4xl hover:scale-125 duration-300 cursor-pointer">
+          <a
+            href="https://wa.me/+628976121070"
+            className="text-4xl hover:scale-125 duration-300 cursor-pointer"
+            target="_blank"
+          >
             <ImWhatsapp />
           </a>
         </div>

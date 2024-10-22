@@ -84,33 +84,6 @@ export default function PortfolioContent({
           style={{ fontSize: "19px" }}
         ></div>
 
-        {/* <section className="mt-16">
-          <span className="font-semibold text-2xl">Share This Project : </span>
-          <div className="flex mt-5 gap-x-4">
-            <a
-              href="/"
-              className="p-3 rounded-lg text-lg bg-pink-500 text-white"
-            >
-              <BsInstagram />
-            </a>
-            <a
-              href="/"
-              className="p-3 rounded-lg text-lg bg-green-500 text-white"
-            >
-              <BsWhatsapp />
-            </a>
-            <a
-              href="/"
-              className="p-3 rounded-lg text-lg bg-blue-600 text-white"
-            >
-              <BsLinkedin />
-            </a>
-            <button className="p-3 rounded-lg text-lg bg-gray-100 dark:text-black">
-              <BiShareAlt />
-            </button>
-          </div>
-        </section> */}
-
         <Link
           href="/"
           className="btn btn-outlined inline-flex gap-x-2 mt-8 items-center btn-small "

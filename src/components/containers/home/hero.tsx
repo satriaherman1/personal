@@ -58,7 +58,7 @@ export default function Hero() {
                 Get In Touch
               </button>
               <a
-                href=""
+                href="/docs/cv.pdf"
                 className="btn btn-outlined flex items-center gap-x-2  w-fit"
               >
                 <FiDownload className="text-xl md:text-2xl" /> Download CV
