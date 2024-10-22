@@ -14,7 +14,7 @@ const certificationList = [
     name: "3rd Places Web Design Competition",
     commitee: "Universitas Atma Jaya Yogyakarta",
     category: "competition",
-    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
+    url: "https://drive.google.com/file/d/1Ab9zRZR6X2zXEDGBMIfuHw-X-bNDSH6I/view",
 
     year: 2020,
     description:
@@ -34,11 +34,10 @@ const certificationList = [
     name: "HTML",
     commitee: "Sololearn",
     category: "certification",
-    url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
+    url: "https://www.sololearn.com/en/certificates/CT-FJGFU8CW",
 
     year: 2019,
-    description:
-      "Learning a Javascript basic including : data structure, variables, function,condition & looping, Document Object Model, ",
+    description: "Learning a HTML Basic tag and layouting for website ",
   },
   {
     name: "React + Redux",
@@ -47,7 +46,7 @@ const certificationList = [
     url: "https://www.sololearn.com/Certificate/CT-HCUJVSKO/png",
     year: 2022,
     description:
-      "Learning a Javascript basic including : data structure, variables, function,condition & looping, Document Object Model, ",
+      "Learning a fundamental of React (state, props, component life cycle) and Redux for state management ",
   },
   {
     name: "Web Development Fundamentals",
@@ -55,7 +54,7 @@ const certificationList = [
     category: "certification",
     url: "https://www.sololearn.com/Certificate/CT-G6KVU1EM/png",
     year: 2022,
-    description: "Learning fundamentals of web like :  ",
+    description: "Learning fundamentals of responsive web development ",
   },
   {
     name: "PHP",
@@ -63,7 +62,8 @@ const certificationList = [
     category: "certification",
     url: "https://www.sololearn.com/Certificate/CT-8JF3QOCK/png",
     year: 2022,
-    description: "Learning fundamentals of web like :  ",
+    description:
+      "Learning Basic of PHP routing, data structure, object oriented, cookie, session",
   },
 ];
 
