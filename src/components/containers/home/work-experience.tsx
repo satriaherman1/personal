@@ -87,7 +87,7 @@ export default function WorkExperience() {
           >
             <ImGithub />
           </a>
-          target="_blank"
+
           <a
             href="https://www.instagram.com/__senandika___?igsh=MTM5a3dqYms1OGxhdA=="
             className="text-4xl hover:scale-125 duration-300 cursor-pointer"
