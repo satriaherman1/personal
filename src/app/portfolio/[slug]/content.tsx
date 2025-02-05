@@ -37,7 +37,7 @@ export default function PortfolioContent({
         </div>
 
         <div className="container my-4">
-          <hr />
+          <hr className="dark:border-gray-700" />
         </div>
 
         <div className="flex items-center justify-center gap-x-4 mb-12">
