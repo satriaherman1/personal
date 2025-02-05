@@ -4,6 +4,7 @@
   cursor: pointer;
   font-size: 18px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .btn-outlined {

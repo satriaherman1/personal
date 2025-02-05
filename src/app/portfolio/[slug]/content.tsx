@@ -4,6 +4,7 @@ import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import Navbar from "@src/components/commons/navbar";
 import useStyleRewrite from "@src/utils/hooks/style-rewrite";
 import classNames from "classnames";
+import Link from "next/link";
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import ImageGallery from "react-image-gallery";
@@ -31,12 +32,27 @@ export default function PortfolioContent({
 
       <main className=" py-3 md:pt-20 px-4">
         <h1 className="text-4xl font-semibold mt-12 text-center">{title}</h1>
-        <div className="text-gray-600 mt-3 dark:text-gray-400 mb-12 text-center">
-          {company} |{" "}
+        <div className="text-gray-600 mt-3 dark:text-gray-400  text-center">
+          {company}
+        </div>
+
+        <div className="container my-4">
+          <hr />
+        </div>
+
+        <div className="flex items-center justify-center gap-x-4 mb-12">
+          <Link
+            href="/"
+            className="h-fit btn btn-small btn-outlined flex gap-x-2 items-center"
+          >
+            <FaArrowLeft />
+            Go back
+          </Link>
+
           <a
             href={projectUrl}
             target="_blank"
-            className="underline cursor-pointer "
+            className="h-fit cursor-pointer btn btn-small btn-primary btn-outlined"
             rel="noopener noreferrer"
           >
             Visit Website
