@@ -38,6 +38,7 @@ export const GET_PORTFOLIO_BY_SLUG = `
       role
       year
       simpleDescription
+      projectUrl
     }
   }
 `;
