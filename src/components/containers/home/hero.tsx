@@ -10,10 +10,18 @@ import { useEffect, useState } from "react";
 import { FiDownload } from "react-icons/fi";
 
 export default function Hero() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(
+    localStorage.getItem("isFirstTime") === "false"
+  );
   const [isOpacity0, setIsOpacity0] = useState(false);
 
   useEffect(() => {
+    if (window !== undefined) {
+      if (localStorage.getItem("isFirstTime") === "false") {
+        setIsLoading(false);
+        setIsOpacity0(true);
+      }
+    }
     // Simulasi loading page selama 2 detik
     const hideTimout = setTimeout(() => {
       setIsLoading(false);
@@ -33,8 +41,7 @@ export default function Hero() {
       {isLoading && (
         <LoadingOverlay
           className={classNames({
-            "opacity-0":
-              isOpacity0 || localStorage.getItem("isFirstTime") === "false",
+            "opacity-0": isOpacity0,
           })}
         />
       )}
