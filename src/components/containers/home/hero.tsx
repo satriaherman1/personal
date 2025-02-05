@@ -19,6 +19,7 @@ export default function Hero() {
       setIsLoading(false);
     }, 3500);
     const opacityTimeout = setTimeout(() => {
+      localStorage.setItem("isFirstTime", "false");
       setIsOpacity0(true);
     }, 2700);
 
@@ -32,7 +33,8 @@ export default function Hero() {
       {isLoading && (
         <LoadingOverlay
           className={classNames({
-            "opacity-0": isOpacity0,
+            "opacity-0":
+              isOpacity0 || localStorage.getItem("isFirstTime") === "false",
           })}
         />
       )}
