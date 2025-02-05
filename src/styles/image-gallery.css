@@ -17,6 +17,10 @@ body .fullscreen .image-gallery-slide .image-gallery-image {
   height: 100vh;
 }
 
+.image-gallery .fullscreen {
+  z-index: 1000;
+}
+
 .image-gallery-slide {
   position: relative;
 }
