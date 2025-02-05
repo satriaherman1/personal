@@ -13,7 +13,7 @@ export default function Footer({ className, maxWClassName }: Props) {
   return (
     <footer
       className={classNames(
-        "mb-16 md:mb-0 pt-20 bg-gray-100 relative dark:bg-slate-900 dark:text-white",
+        "mb-16 md:mb-0 pt-20 bg-gray-100 relative dark:bg-gray-900 dark:text-white",
         className
       )}
     >

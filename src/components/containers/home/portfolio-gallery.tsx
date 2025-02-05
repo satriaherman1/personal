@@ -2,6 +2,7 @@
 
 import { Portfolio } from "@src/app/portfolio/[slug]/page";
 import { truncateText } from "@src/utils/utils";
+import classNames from "classnames";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -15,29 +16,33 @@ type PortfolioCardProps = {
   company: string;
   seeDetails: string;
   description?: any;
+  className?: string;
 };
 
-const PortfolioCard = ({
+export const PortfolioCard = ({
   url,
   title,
-
+  className,
   seeDetails,
   description,
 }: PortfolioCardProps) => {
   return (
-    <div className="flex flex-col md:flex-row border rounded-2xl w-full basis-full md:basis-[calc(50%-20px)] cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)] dark:bg-slate-800 dark:border-gray-500 relative z-10">
-      <img
-        src={url}
-        className="rounded-t-2xl rounded-b-2xl w-full md:w-[300px] h-[280px] md:h-full"
-        alt="portfolio"
-      />
-      <section className="px-7 py-6">
+    <div
+      className={classNames(
+        className,
+        "flex flex-col md:flex-row border rounded-2xl w-full  cursor-pointer hover:shadow-lg duration-200 bg-[rgb(237,239,241)] dark:bg-slate-800 dark:border-gray-500 relative z-10"
+      )}
+    >
+      <div className="w-full h-[280px] md:w-[400px] md:h-full rounded-t-2xl rounded-b-2xl overflow-hidden md:basis-[40%]">
+        <img src={url} className="object-cover w-full h-full" alt="portfolio" />
+      </div>
+      <section className="px-7 py-6 md:basis-[50%]">
         <h2 className="font-bold text-2xl">{title}</h2>
         {/* <span className="text-gray-500 mt-2">{company}</span> */}
 
         <div
           className="mt-9 text-gray-600 dark:text-gray-400 font-medium"
-          dangerouslySetInnerHTML={{ __html: truncateText(description, 140) }}
+          dangerouslySetInnerHTML={{ __html: truncateText(description, 190) }}
         ></div>
 
         <Link
@@ -59,7 +64,7 @@ export default function PortfolioGallery({ portfolioList }: Props) {
           Portfolio
         </h1>
 
-        <section className="mt-12 flex flex-wrap gap-6 justify-between">
+        <section className="mt-12 flex flex-wrap gap-9 justify-center">
           {portfolioList.map(
             ({ preview, title, company, slug, simpleDescription }, index) => (
               <PortfolioCard
@@ -68,6 +73,7 @@ export default function PortfolioGallery({ portfolioList }: Props) {
                 url={preview[0].url}
                 company={company}
                 description={simpleDescription}
+                className="basis-full max-w-[900px]  items-center"
                 seeDetails={`/portfolio/${slug}`}
               />
             )

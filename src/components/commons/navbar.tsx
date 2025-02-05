@@ -16,6 +16,7 @@ type Props = {
 export default function Navbar({ className }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false);
 
   // Detect scroll and set the state
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function Navbar({ className }: Props) {
         className,
         {
           "bg-white shadow-[0px_5px_60px_-15px_rgba(0,0,0,0.2)] dark:bg-slate-900 ":
-            isScrolled,
+            isScrolled || isDesktopMenuOpen,
         } // Add background color and shadow when scrolled
       )}
     >
@@ -56,20 +57,20 @@ export default function Navbar({ className }: Props) {
             </a>
           </section>
 
-          <section className="flex gap-x-10 text-xl">
-            <Link href="/">Home</Link>
-            <Link href="/">Projects</Link>
-            <a href="https://blog.satriaherman.com" target="_blank">
-              Blogs
-            </a>
-          </section>
-
-          {/* <button className="btn btn-outlined btn-small">Get In Touch</button> */}
-          <DarkModeSwitcher className=" relative" />
+          <button onClick={() => setIsDesktopMenuOpen(!isDesktopMenuOpen)}>
+            {isDesktopMenuOpen ? (
+              <GrClose fontSize={20} className="dark:text-white duration-200" />
+            ) : (
+              <RiMenu3Line
+                fontSize={20}
+                className="dark:text-white duration-200"
+              />
+            )}
+          </button>
         </div>
       </div>
 
-      {/* menubar */}
+      {/* menubar mobile */}
       <section
         className={classNames({
           "fixed  left-0 w-full h-full dark:bg-gray-900 bg-white z-[999] duration-300":
@@ -84,22 +85,23 @@ export default function Navbar({ className }: Props) {
 
         <DecoratorLeft className="absolute z-[1001] bottom-0" fill="#525452" />
 
-        <DarkModeSwitcher className="absolute right-4 top-3" />
         <div className="flex flex-col text-center gap-y-10 justify-center h-full dark:text-white">
-          <Link href="/" className=" text-3xl px-4 ">
+          <Link href="/" className=" text-3xl px-4 -mt-[90px]">
             Home
           </Link>
-          <Link href="/" className=" text-3xl px-4 ">
-            Projects
-          </Link>
+
           <Link
-            href="https://blog.satriaherman.com"
+            href="https://blog-satriaherman.vercel.app"
             target="_blank"
             className=" text-3xl px-4 "
           >
             Blogs
           </Link>
         </div>
+
+        <DarkModeSwitcher className="absolute right-4 top-3" />
+
+        <div className="flex flex-col text-center gap-y-10 justify-center h-full dark:text-white"></div>
       </section>
 
       {/* end menubar */}
@@ -124,6 +126,35 @@ export default function Navbar({ className }: Props) {
           )}
         </button>
       </div>
+
+      {/* menubar dekstop */}
+      <section
+        className={classNames({
+          "fixed  right-0 w-full h-full dark:bg-gray-900 bg-white z-[999] duration-300":
+            true,
+          "right-0 opacity-100": isDesktopMenuOpen,
+          "-right-[120vw] opacity-0": !isDesktopMenuOpen,
+        })}
+      >
+        <DecoratorLeft className="absolute z-[1001] bottom-0" fill="#525452" />
+        <div className="flex flex-col text-center gap-y-10 justify-center h-full dark:text-white relative">
+          <Link href="/" className=" text-3xl px-4 -mt-[90px]">
+            Home
+          </Link>
+
+          <Link
+            href="https://blog-satriaherman.vercel.app"
+            target="_blank"
+            className=" text-3xl px-4 "
+          >
+            Blogs
+          </Link>
+
+          <DarkModeSwitcher className="absolute right-20 bottom-[120px]" />
+        </div>
+        {/* <DarkModeSwitcher className="absolute right-4 top-3" /> */}
+        <div className="flex flex-col text-center gap-y-10 justify-center h-full dark:text-white"></div>
+      </section>
     </nav>
   );
 }

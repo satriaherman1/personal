@@ -1,8 +1,10 @@
 import PortfolioContent from "@src/app/portfolio/[slug]/content";
 import Footer from "@src/components/commons/footer";
+import "@src/styles/image-gallery.css";
 import { hygraphClient } from "@src/utils/graphql-client";
+import "react-image-gallery/styles/css/image-gallery.css";
 
-const GET_ALL_PORTFOLIOS = `
+export const GET_ALL_PORTFOLIOS = `
 {
     portfolios{
         id
@@ -19,7 +21,7 @@ const GET_ALL_PORTFOLIOS = `
 }
 `;
 
-const GET_PORTFOLIO_BY_SLUG = `
+export const GET_PORTFOLIO_BY_SLUG = `
   query GetPortfolioBySlug($slug: String!) {
     portfolio(where: { slug: $slug }) {
       id
@@ -53,6 +55,7 @@ export type Portfolio = {
   client: string;
   role: string;
   year: string;
+  projectUrl: string;
 };
 
 type PageParams = {

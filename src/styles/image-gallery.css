@@ -1,0 +1,31 @@
+.image-gallery-thumbnail img {
+  height: 70px;
+}
+
+/* gallery */
+body .image-gallery-slide .image-gallery-image {
+  width: 100%;
+  border-radius: 10px;
+
+  object-fit: cover;
+
+  @apply h-[300px] md:h-[900px];
+}
+
+body .fullscreen .image-gallery-slide .image-gallery-image {
+  object-fit: contain;
+  height: 100vh;
+}
+
+.image-gallery-slide {
+  position: relative;
+}
+
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  object-fit: cover;
+}
+
+.image-gallery-thumbnail {
+  overflow: hidden;
+  border-radius: 10px;
+}
