@@ -130,7 +130,7 @@ export default function Navbar({ className }: Props) {
       {/* menubar dekstop */}
       <section
         className={classNames({
-          "fixed  right-0 w-full h-full dark:bg-gray-900 bg-white z-[999] duration-300":
+          "fixed   w-full h-full dark:bg-gray-900 bg-white z-[999] duration-300":
             true,
           "right-0 opacity-100": isDesktopMenuOpen,
           "-right-[120vw] opacity-0": !isDesktopMenuOpen,
