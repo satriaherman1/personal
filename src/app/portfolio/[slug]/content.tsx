@@ -15,9 +15,7 @@ export default function PortfolioContent({
   preview,
   description,
   simpleDescription,
-  client,
-  role,
-  year,
+
   projectUrl,
 }: Portfolio) {
   const previewImages = preview.map((image) => ({
