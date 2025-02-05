@@ -16,7 +16,7 @@ export default function Hero() {
   const [isOpacity0, setIsOpacity0] = useState(false);
 
   useEffect(() => {
-    if (window !== undefined) {
+    if (typeof window !== "undefined") {
       if (localStorage.getItem("isFirstTime") === "false") {
         setIsLoading(false);
         setIsOpacity0(true);
