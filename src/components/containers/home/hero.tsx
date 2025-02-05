@@ -10,9 +10,7 @@ import { useEffect, useState } from "react";
 import { FiDownload } from "react-icons/fi";
 
 export default function Hero() {
-  const [isLoading, setIsLoading] = useState(
-    localStorage.getItem("isFirstTime") === "false"
-  );
+  const [isLoading, setIsLoading] = useState(true);
   const [isOpacity0, setIsOpacity0] = useState(false);
 
   useEffect(() => {
